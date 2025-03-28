@@ -1,0 +1,16 @@
+# robots.txt for ogawachihiro-office.com
+
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /fees
+Allow: /contact
+Allow: /blog
+
+# Disallow specific paths if needed
+# Disallow: /admin
+# Disallow: /private
+
+# Sitemap location
+Sitemap: https://ogawachihiro-office.com/sitemap.xml
+
