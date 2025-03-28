@@ -46,7 +46,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={{
+          backgroundImage: "url(/background.png)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          minHeight: "100vh",
+        }}
+      >
         <LanguageProvider>
           <Header />
           <main className="container mx-auto p-4">{children}</main>

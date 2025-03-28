@@ -54,13 +54,7 @@ export default function Contact() {
           <div className="bg-white p-4 rounded-lg shadow-sm text-center">
             <h2 className="font-semibold mb-3 text-sky-700">{t("公式LINE", "Official LINE")}</h2>
             <div className="flex justify-center mb-3">
-              <Image
-                src="/placeholder.svg?height=150&width=150&text=LINE+QR"
-                alt="LINE QR Code"
-                width={150}
-                height={150}
-                className="border p-2"
-              />
+              <Image src="/line-qr.jpeg" alt="LINE QR Code" width={150} height={150} className="border p-2" />
             </div>
             <p className="text-sm text-gray-600">
               {t("LINEでもお気軽にお問い合わせください。", "Feel free to contact us via LINE as well.")}
