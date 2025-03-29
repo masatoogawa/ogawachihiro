@@ -119,21 +119,23 @@ export default function Fees() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="在" ruby="ざい" />
-                          <RubyText text="留" ruby="りゅう" />
-                          <RubyText text="資" ruby="し" />
-                          <RubyText text="格" ruby="かく" />
-                          <RubyText text="認" ruby="にん" />
-                          <RubyText text="定" ruby="てい" />
-                          <RubyText text="証" ruby="しょう" />
-                          <RubyText text="明" ruby="めい" />
-                          <RubyText text="書" ruby="しょ" />
-                          の
-                          <RubyText text="申" ruby="しん" />
-                          <RubyText text="請" ruby="せい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="在" ruby="ざい" />
+                            <RubyText text="留" ruby="りゅう" />
+                            <RubyText text="資" ruby="し" />
+                            <RubyText text="格" ruby="かく" />
+                            <RubyText text="認" ruby="にん" />
+                            <RubyText text="定" ruby="てい" />
+                            <RubyText text="証" ruby="しょう" />
+                            <RubyText text="明" ruby="めい" />
+                            <RubyText text="書" ruby="しょ" />
+                            の
+                            <RubyText text="申" ruby="しん" />
+                            <RubyText text="請" ruby="せい" />
+                          </span>
                         </>
                       ) : (
                         t("在留資格認定証明書交付申請", "", "Certificate of Eligibility Application")
@@ -152,11 +154,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          ビザの
-                          <RubyText text="更新申請" ruby="こうしんしんせい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            ビザの
+                            <RubyText text="更新申請" ruby="こうしんしんせい" />
+                          </span>
                         </>
                       ) : (
                         t("在留期間更新許可申請", "", "Extension of Period of Stay")
@@ -175,13 +179,15 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          ビザの
-                          <RubyText text="種類" ruby="しゅるい" />を<RubyText text="変" ruby="か" />
-                          える
-                          <RubyText text="申請" ruby="しんせい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            ビザの
+                            <RubyText text="種類" ruby="しゅるい" />を<RubyText text="変" ruby="か" />
+                            える
+                            <RubyText text="申請" ruby="しんせい" />
+                          </span>
                         </>
                       ) : (
                         t("在留資格変更許可申請", "", "Change of Status of Residence")
@@ -200,10 +206,12 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="永住権" ruby="えいじゅうけん" />の<RubyText text="申請" ruby="しんせい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="永住権" ruby="えいじゅうけん" />の<RubyText text="申請" ruby="しんせい" />
+                          </span>
                         </>
                       ) : (
                         t("永住許可申請", "", "Permanent Residence Application")
@@ -222,11 +230,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="働" ruby="はたら" />く<RubyText text="資格" ruby="しかく" />の
-                          <RubyText text="証明書申請" ruby="しょうめいしょしんせい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="働" ruby="はたら" />く<RubyText text="資格" ruby="しかく" />の
+                            <RubyText text="証明書申請" ruby="しょうめいしょしんせい" />
+                          </span>
                         </>
                       ) : (
                         t("就労資格証明書交付申請", "", "Certificate of Authorization for Employment")
@@ -245,10 +255,12 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-2 sm:px-4 border break-words">
+                    <td className="py-2 px-2 sm:px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="経営管理" ruby="けいえいかんり" />ビザ
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="経営管理" ruby="けいえいかんり" />ビザ
+                          </span>
                         </>
                       ) : (
                         t("経営管理ビザ", "", "Business Manager VISA")
@@ -311,11 +323,13 @@ export default function Fees() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="日本国籍" ruby="にほんこくせき" />を<RubyText text="取" ruby="と" />る
-                          <RubyText text="申請" ruby="しんせい" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="日本国籍" ruby="にほんこくせき" />を<RubyText text="取" ruby="と" />る
+                            <RubyText text="申請" ruby="しんせい" />
+                          </span>
                         </>
                       ) : (
                         t("帰化申請", "", "Naturalization Application")
@@ -334,11 +348,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="会社" ruby="かいしゃ" />を<RubyText text="作" ruby="つく" />る
-                          <RubyText text="手続" ruby="てつづ" />き
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="会社" ruby="かいしゃ" />を<RubyText text="作" ruby="つく" />る
+                            <RubyText text="手続" ruby="てつづ" />き
+                          </span>
                         </>
                       ) : (
                         t("法人設立", "", "Establishment of Corporation")
@@ -357,11 +373,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="特許" ruby="とっきょ" />や<RubyText text="著作権" ruby="ちょさくけん" />の
-                          <RubyText text="手続" ruby="てつづ" />き
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="特許" ruby="とっきょ" />や<RubyText text="著作権" ruby="ちょさくけん" />の
+                            <RubyText text="手続" ruby="てつづ" />き
+                          </span>
                         </>
                       ) : (
                         t("知的財産関連", "", "Intellectual Property Related")
@@ -380,10 +398,12 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="遺言書" ruby="ゆいごんしょ" />を<RubyText text="作" ruby="つく" />る
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="遺言書" ruby="ゆいごんしょ" />を<RubyText text="作" ruby="つく" />る
+                          </span>
                         </>
                       ) : (
                         t("遺言書作成", "", "Will Preparation")
@@ -402,11 +422,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="行政書士" ruby="ぎょうせいしょし" />の
-                          <RubyText text="顧問契約" ruby="こもんけいやく" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="行政書士" ruby="ぎょうせいしょし" />の
+                            <RubyText text="顧問契約" ruby="こもんけいやく" />
+                          </span>
                         </>
                       ) : (
                         t("行政書士顧問", "", "Administrative Scrivener Advisor")
@@ -415,9 +437,11 @@ export default function Fees() {
                     <td className="py-2 px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="月" ruby="つき" />
-                          20,000
-                          <RubyText text="円" ruby="えん" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="月" ruby="つき" />
+                            20,000
+                            <RubyText text="円" ruby="えん" />
+                          </span>
                         </>
                       ) : (
                         t("20,000円/月", "", "¥20,000/month")
@@ -425,11 +449,13 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-4 border" style={{ wordBreak: 'break-all', maxWidth: '200px' }}>
                       {isEasyJapanese ? (
                         <>
-                          2<RubyText text="回目" ruby="かいめ" />
-                          <RubyText text="以降" ruby="いこう" />の<RubyText text="相談" ruby="そうだん" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            2<RubyText text="回目" ruby="かいめ" />
+                            <RubyText text="以降" ruby="いこう" />の<RubyText text="相談" ruby="そうだん" />
+                          </span>
                         </>
                       ) : (
                         t("2回目以降のご相談", "", "Consultations after the first time")
@@ -438,9 +464,11 @@ export default function Fees() {
                     <td className="py-2 px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
-                          1<RubyText text="時間" ruby="じかん" />
-                          5,000
-                          <RubyText text="円" ruby="えん" />
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            1<RubyText text="時間" ruby="じかん" />
+                            5,000
+                            <RubyText text="円" ruby="えん" />
+                          </span>
                         </>
                       ) : (
                         t("5,000円/時間", "", "¥5,000/hour")
