@@ -8,6 +8,7 @@ import { LanguageProvider } from "@/contexts/language-context"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ogawachihiro-office.com'),
   title: "行政書士小川千尋事務所",
   description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
   openGraph: {
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
     siteName: "行政書士小川千尋事務所",
     images: [
       {
-        url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon.jpg-7UIaFR881ofrY6Y9igbCGGbrYPNXuH.jpeg",
-        width: 800,
-        height: 800,
+        url: "/icon.svg",
+        width: 32,
+        height: 32,
         alt: "OGAWA Logo",
       },
     ],
@@ -30,13 +31,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "行政書士小川千尋事務所",
     description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
-    images: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon.jpg-7UIaFR881ofrY6Y9igbCGGbrYPNXuH.jpeg"],
+    images: ["/icon.svg"],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [
+      { url: 'icon.svg', type: 'image/svg+xml' },
+      { url: 'favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: [
+      { url: 'apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({

@@ -15,16 +15,12 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const toggleLanguage = () => {
-    setLanguage(language === "ja" ? "en" : "ja")
-  }
-
   const menuItems = [
-    { href: "/", label: t("TOP", "HOME") },
-    { href: "/about", label: t("事務所概要", "About Us") },
-    { href: "/fees", label: t("ご利用料金", "Fees") },
-    { href: "/contact", label: t("お問い合わせ", "Contact") },
-    { href: "/blog", label: t("ブログ", "Blog") },
+    { href: "/", label: t("TOP", "TOP", "HOME") },
+    { href: "/about", label: t("事務所概要", "事務所について", "About Us") },
+    { href: "/fees", label: t("ご利用料金", "料金", "Fees") },
+    { href: "/contact", label: t("お問い合わせ", "お問い合わせ", "Contact") },
+    { href: "/blog", label: t("ブログ", "ブログ", "Blog") },
   ]
 
   return (
@@ -32,17 +28,39 @@ export default function Header() {
       <div className="bg-sky-600 text-white p-2 flex justify-between items-center">
         <div>
           <span className="text-sm">
-            {t("行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
+            {t("行政書士小川千尋事務所", "行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
           </span>
         </div>
-        <div>
+        <div className="flex gap-2">
           <Button
             variant="ghost"
             size="sm"
-            onClick={toggleLanguage}
-            className="text-white hover:text-white hover:bg-sky-700 px-2 py-1 h-auto"
+            onClick={() => setLanguage("ja")}
+            className={`text-white hover:text-white hover:bg-sky-700 px-2 py-1 h-auto ${
+              language === "ja" ? "bg-sky-700" : ""
+            }`}
           >
-            {language === "ja" ? "EN" : "日本語"}
+            日本語
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setLanguage("easy-ja")}
+            className={`text-white hover:text-white hover:bg-sky-700 px-2 py-1 h-auto ${
+              language === "easy-ja" ? "bg-sky-700" : ""
+            }`}
+          >
+            やさしい日本語
+          </Button>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setLanguage("en")}
+            className={`text-white hover:text-white hover:bg-sky-700 px-2 py-1 h-auto ${
+              language === "en" ? "bg-sky-700" : ""
+            }`}
+          >
+            English
           </Button>
         </div>
       </div>
@@ -50,14 +68,14 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon.jpg-7UIaFR881ofrY6Y9igbCGGbrYPNXuH.jpeg"
+              src="/logo.jpeg"
               alt="OGAWA Logo"
               width={40}
               height={40}
               className="rounded-full"
             />
             <span className="text-xl md:text-2xl font-bold">
-              {t("行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
+              {t("行政書士小川千尋事務所", "行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
             </span>
           </Link>
 
@@ -75,7 +93,11 @@ export default function Header() {
           </nav>
 
           {/* ハンバーガーメニューボタン */}
-          <button className="md:hidden text-sky-600" onClick={toggleMenu} aria-label={t("メニューを開く", "Open menu")}>
+          <button
+            className="md:hidden text-sky-600"
+            onClick={toggleMenu}
+            aria-label={t("メニューを開く", "メニューを開く", "Open menu")}
+          >
             <Menu size={24} />
           </button>
         </div>
@@ -90,7 +112,7 @@ export default function Header() {
           {/* メニューコンテンツ */}
           <div className="relative bg-white bg-opacity-90 backdrop-blur-sm w-full max-w-sm ml-auto h-full shadow-xl">
             <div className="flex justify-end p-4">
-              <button onClick={toggleMenu} aria-label={t("メニューを閉じる", "Close menu")}>
+              <button onClick={toggleMenu} aria-label={t("メニューを閉じる", "メニューを閉じる", "Close menu")}>
                 <X size={24} className="text-sky-600" />
               </button>
             </div>
