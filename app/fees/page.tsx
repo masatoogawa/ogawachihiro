@@ -80,11 +80,11 @@ export default function Fees() {
             <h2 className="text-xl font-semibold mb-4 text-sky-700">
               {isEasyJapanese ? (
                 <>
-                  <RubyText text="在留資格" ruby="ざいりゅうしかく" />
+                  <RubyText text="在留資格" ruby="ざいりゅうしかく" />・ビザ
                   <RubyText text="申請" ruby="しんせい" />
                 </>
               ) : (
-                t("在留資格申請", "", "Residence Status Applications")
+                t("在留資格・ビザ申請", "", "Residence Status & VISA Applications")
               )}
             </h2>
             <div className="overflow-x-auto">
@@ -226,6 +226,28 @@ export default function Fees() {
                         </>
                       ) : (
                         t("80,000円〜", "", "¥80,000〜")
+                      )}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-2 px-4 border">
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="経営管理" ruby="けいえいかんり" />ビザ
+                        </>
+                      ) : (
+                        t("経営管理ビザ", "", "Business Manager VISA")
+                      )}
+                    </td>
+                    <td className="py-2 px-4 border text-right">
+                      {isEasyJapanese ? (
+                        <>
+                          180,000
+                          <RubyText text="円" ruby="えん" />
+                          から
+                        </>
+                      ) : (
+                        t("180,000円〜", "", "¥180,000〜")
                       )}
                     </td>
                   </tr>

@@ -29,17 +29,22 @@ export default function Home() {
                 <>
                   <span className="block mb-1">
                     <RubyText text="外国人" ruby="がいこくじん" />の
-                    <RubyText text="在留資格" ruby="ざいりゅうしかく" />
+                    <RubyText text="在留資格" ruby="ざいりゅうしかく" />・VISA
                     <RubyText text="申請" ruby="しんせい" />
                   </span>
                   <span className="block">
-                    <RubyText text="会社" ruby="かいしゃ" />
-                    <RubyText text="設立" ruby="せつりつ" />の
-                    <RubyText text="手伝" ruby="てつだ" />い
+                    <RubyText text="経営者" ruby="けいえいしゃ" />の
+                    <RubyText text="外国人" ruby="がいこくじん" />
+                    <RubyText text="雇用" ruby="こよう" />
+                    <RubyText text="支援" ruby="しえん" />
                   </span>
                 </>
               ) : (
-                t("外国人の在留資格申請・法人設立サポート", "", "Immigration Support & Establishment of Corporation")
+                t(
+                  "外国人の在留資格・VISA申請、経営者の外国人雇用のサポート",
+                  "",
+                  "Immigration & VISA Support, Foreign Employment Assistance for Business Owners"
+                )
               )}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-sky-700 mb-4 md:mb-6">
@@ -56,7 +61,7 @@ export default function Home() {
 
             <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg shadow-sm mb-4 md:mb-6">
               <h2 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-4 text-sky-700">
-                {isEasyJapanese ? <>できること</> : t("取扱業務", "", "Specialty field")}
+                {isEasyJapanese ? <>できること</> : t("主な取扱業務", "", "Specialty field")}
               </h2>
               <ul className="space-y-2 sm:space-y-4 list-disc pl-5 text-sm sm:text-base">
                 <li>

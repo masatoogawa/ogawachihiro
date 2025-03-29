@@ -66,7 +66,7 @@ export default function About() {
                     {isEasyJapanese ? (
                       <>
                         <RubyText text="私" ruby="わたし" />は<RubyText text="外国人" ruby="がいこくじん" />の
-                        <RubyText text="方" ruby="かた" />の<RubyText text="在留資格" ruby="ざいりゅうしかく" />
+                        <RubyText text="方" ruby="かた" />の<RubyText text="在留資格" ruby="ざいりゅうしかく" />・VISA
                         <RubyText text="申請" ruby="しんせい" />を<RubyText text="扱" ruby="あつか" />
                         っています。
                         <RubyText text="日本" ruby="にほん" />で<RubyText text="働" ruby="はたら" />
@@ -82,9 +82,9 @@ export default function About() {
                       </>
                     ) : (
                       t(
-                        "私は外国人の皆様の在留資格申請を取り扱っており、日本での就労や生活を希望される外国人の方々と、外国人を雇用される企業の経営者様をつなぐ架け橋となれるよう日々努めております。",
+                        "私は外国人の皆様の在留資格・VISA申請を取り扱っており、日本での就労や生活を希望される外国人の方々と、外国人を雇用される企業の経営者様をつなぐ架け橋となれるよう日々努めております。",
                         "",
-                        "I handle residence status supports for foreign nationals and strive to help both foreign nationals who wish to work and live in Japan and business owners who employ foreign nationals.",
+                        "I handle residence status and VISA applications for foreign nationals and strive to help both foreign nationals who wish to work and live in Japan and business owners who employ foreign nationals."
                       )
                     )}
                   </p>
@@ -112,7 +112,7 @@ export default function About() {
                       </>
                     ) : (
                       t(
-                        "外国人の皆様が言葉の壁や複雑な手続きに悩まされることなく、日本で安定して生活できるよう、丁寧かつ親身になってサポートいたします。また、企業様に対しましても外国人雇用に伴うさまざまなご不安やご負担を軽減し、安心して人材活用を進めていただけるよう全力でサポートいたします。",
+                        "外国人の皆様が言葉の壁や複雑な手続きに悩まされることなく、日本で安定して生活できるよう、丁寧かつ親身になってサポートいたします。また、企業様に対しましても、外国人雇用に伴うさまざまなご不安やご負担を軽減し、安心して人材活用を進めていただけるよう全力でサポートいたします。",
                         "",
                         "I provide careful and personalized support to help foreign nationals live stably in Japan without being troubled by language barriers or complex procedures. I also do my utmost to support companies by reducing various anxieties and burdens associated with employing foreign nationals, so that they can proceed with human resource utilization with peace of mind.",
                       )

@@ -44,7 +44,7 @@ export default function Blog() {
             t(
               "現在、ブログコンテンツを準備中です。外国人の方の在留資格申請や法人設立、知的財産権に関する有益な情報を近日中に公開予定です。",
               "",
-              "We are currently preparing blog content. Useful information on residence status applications for foreigners, business establishment, and intellectual property rights will be published soon.",
+              "Useful information on residence status applications for foreign people, establishment of corporation and intellectual property rights will be published soon.",
             )
           )}
         </p>
