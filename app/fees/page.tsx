@@ -103,13 +103,13 @@ export default function Fees() {
                         t("申請種類", "", "Application Type")
                       )}
                     </th>
-                    <th className="py-2 px-2 sm:px-4 border text-right w-1/3">
+                    <th className="py-2 px-2 sm:px-4 border text-right w-1/3" style={{ maxWidth: '100px', wordBreak: 'break-all' }}>
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="料金" ruby="りょうきん" />
-                          <div className="inline-block">
+                          <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
+                            <RubyText text="料金" ruby="りょうきん" />
                             （<RubyText text="税抜" ruby="ぜいぬき" />き）
-                          </div>
+                          </span>
                         </>
                       ) : (
                         t("料金（税抜）", "", "Fee (Tax Excluded)")
