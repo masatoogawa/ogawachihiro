@@ -122,9 +122,18 @@ export default function Fees() {
                     <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="在留資格認定" ruby="ざいりゅうしかくにんてい" />
-                          <RubyText text="証明書" ruby="しょうめいしょ" />の
-                          <RubyText text="申請" ruby="しんせい" />
+                          <RubyText text="在" ruby="ざい" />
+                          <RubyText text="留" ruby="りゅう" />
+                          <RubyText text="資" ruby="し" />
+                          <RubyText text="格" ruby="かく" />
+                          <RubyText text="認" ruby="にん" />
+                          <RubyText text="定" ruby="てい" />
+                          <RubyText text="証" ruby="しょう" />
+                          <RubyText text="明" ruby="めい" />
+                          <RubyText text="書" ruby="しょ" />
+                          の
+                          <RubyText text="申" ruby="しん" />
+                          <RubyText text="請" ruby="せい" />
                         </>
                       ) : (
                         t("在留資格認定証明書交付申請", "", "Certificate of Eligibility Application")
