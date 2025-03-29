@@ -43,7 +43,7 @@ export default function Home() {
                 t(
                   "外国人の在留資格・VISA申請、経営者の外国人雇用のサポート",
                   "",
-                  "Immigration & VISA Support, Foreign Employment Assistance for Business Owners"
+                  "Immigration & VISA Support for Foreign Nationals"
                 )
               )}
             </h1>
@@ -71,10 +71,10 @@ export default function Home() {
                         <RubyText text="外国人" ruby="がいこくじん" />の
                         <RubyText text="方" ruby="かた" />の
                         <RubyText text="在留" ruby="ざいりゅう" />
-                        <RubyText text="資格" ruby="しかく" />
+                        <RubyText text="資格" ruby="しかく" />・
                       </span>
                       <span className="block sm:inline">
-                        （ビザ）
+                        ビザ
                         <RubyText text="申請" ruby="しんせい" />や
                         <RubyText text="日本" ruby="にほん" />
                         <RubyText text="国籍" ruby="こくせき" />を

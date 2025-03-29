@@ -91,20 +91,25 @@ export default function Fees() {
               <table className="min-w-full bg-white border">
                 <thead>
                   <tr className="bg-sky-100">
-                    <th className="py-2 px-4 border text-left">
+                    <th className="py-2 px-2 sm:px-4 border text-left w-2/3">
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="申請" ruby="しんせい" />の<RubyText text="種類" ruby="しゅるい" />
+                          <RubyText text="申請" ruby="しんせい" />の
+                          <div className="inline-block">
+                            <RubyText text="種類" ruby="しゅるい" />
+                          </div>
                         </>
                       ) : (
                         t("申請種類", "", "Application Type")
                       )}
                     </th>
-                    <th className="py-2 px-4 border text-right">
+                    <th className="py-2 px-2 sm:px-4 border text-right w-1/3">
                       {isEasyJapanese ? (
                         <>
-                          <RubyText text="料金" ruby="りょうきん" />（<RubyText text="税抜" ruby="ぜいぬき" />
-                          き）
+                          <RubyText text="料金" ruby="りょうきん" />
+                          <div className="inline-block">
+                            （<RubyText text="税抜" ruby="ぜいぬき" />き）
+                          </div>
                         </>
                       ) : (
                         t("料金（税抜）", "", "Fee (Tax Excluded)")
@@ -114,7 +119,7 @@ export default function Fees() {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           <RubyText text="在留資格認定証明書" ruby="ざいりゅうしかくにんていしょうめいしょ" />の
@@ -124,7 +129,7 @@ export default function Fees() {
                         t("在留資格認定証明書交付申請", "", "Certificate of Eligibility Application")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           100,000
@@ -137,7 +142,7 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           ビザの
@@ -147,7 +152,7 @@ export default function Fees() {
                         t("在留期間更新許可申請", "", "Extension of Period of Stay")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           55,000
@@ -160,7 +165,7 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           ビザの
@@ -172,7 +177,7 @@ export default function Fees() {
                         t("在留資格変更許可申請", "", "Change of Status of Residence")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           100,000
@@ -185,7 +190,7 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           <RubyText text="永住権" ruby="えいじゅうけん" />の<RubyText text="申請" ruby="しんせい" />
@@ -194,7 +199,7 @@ export default function Fees() {
                         t("永住許可申請", "", "Permanent Residence Application")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           120,000
@@ -207,7 +212,7 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           <RubyText text="働" ruby="はたら" />く<RubyText text="資格" ruby="しかく" />の
@@ -217,7 +222,7 @@ export default function Fees() {
                         t("就労資格証明書交付申請", "", "Certificate of Authorization for Employment")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           80,000
@@ -230,7 +235,7 @@ export default function Fees() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="py-2 px-4 border">
+                    <td className="py-2 px-2 sm:px-4 border break-words">
                       {isEasyJapanese ? (
                         <>
                           <RubyText text="経営管理" ruby="けいえいかんり" />ビザ
@@ -239,7 +244,7 @@ export default function Fees() {
                         t("経営管理ビザ", "", "Business Manager VISA")
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right">
+                    <td className="py-2 px-2 sm:px-4 border text-right">
                       {isEasyJapanese ? (
                         <>
                           180,000
