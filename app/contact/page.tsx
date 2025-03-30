@@ -5,12 +5,62 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useLanguage } from "@/contexts/language-context"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import Image from "next/image"
 import { RubyText } from "@/components/ruby-text"
+import { useState, FormEvent } from "react"
 
 export default function Contact() {
   const { t, isEasyJapanese } = useLanguage()
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: ""
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target
+    setFormState(prev => ({ ...prev, [id]: value }))
+  }
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      })
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        // フォームをリセット
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      setSubmitStatus("error")
+      console.error("メール送信エラー:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -115,7 +165,55 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="space-y-6 bg-white p-6 rounded-lg shadow-sm">
+          <form className="space-y-6 bg-white p-6 rounded-lg shadow-sm" onSubmit={handleSubmit}>
+            {submitStatus === "success" && (
+              <div className="mb-4 bg-green-50 border border-green-200 text-green-800 p-4 rounded-md">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                  <p className="font-medium">
+                    {isEasyJapanese ? (
+                      <><RubyText text="送信" ruby="そうしん" />できました</>
+                    ) : (
+                      t("送信完了", "", "Message Sent")
+                    )}
+                  </p>
+                </div>
+                <p className="mt-2 text-sm text-green-700">
+                  {isEasyJapanese ? (
+                    <>お<RubyText text="問合" ruby="といあわ" />せありがとうございます。できるだけ<RubyText text="早" ruby="はや" />く<RubyText text="返信" ruby="へんしん" />します。</>
+                  ) : (
+                    t("お問い合わせいただきありがとうございます。内容を確認の上、できるだけ早くご返信いたします。", 
+                      "", 
+                      "Thank you for your inquiry. We will review and respond as soon as possible.")
+                  )}
+                </p>
+              </div>
+            )}
+
+            {submitStatus === "error" && (
+              <div className="mb-4 bg-red-50 border border-red-200 text-red-800 p-4 rounded-md">
+                <div className="flex items-center">
+                  <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
+                  <p className="font-medium">
+                    {isEasyJapanese ? (
+                      <><RubyText text="送信" ruby="そうしん" />できませんでした</>
+                    ) : (
+                      t("送信エラー", "", "Error")
+                    )}
+                  </p>
+                </div>
+                <p className="mt-2 text-sm text-red-700">
+                  {isEasyJapanese ? (
+                    <>もう<RubyText text="一度" ruby="いちど" /><RubyText text="試" ruby="ため" />してください。または<RubyText text="電話" ruby="でんわ" />してください。</>
+                  ) : (
+                    t("送信中にエラーが発生しました。もう一度お試しいただくか、お電話でお問い合わせください。", 
+                      "", 
+                      "An error occurred while sending your message. Please try again or contact us by phone.")
+                  )}
+                </p>
+              </div>
+            )}
+
             <div className="space-y-2">
               <Label htmlFor="name">
                 {isEasyJapanese ? (
@@ -127,7 +225,12 @@ export default function Contact() {
                 )}{" "}
                 <span className="text-red-500">*</span>
               </Label>
-              <Input id="name" required />
+              <Input 
+                id="name" 
+                required 
+                value={formState.name}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="space-y-2">
@@ -141,7 +244,13 @@ export default function Contact() {
                 )}{" "}
                 <span className="text-red-500">*</span>
               </Label>
-              <Input id="email" type="email" required />
+              <Input 
+                id="email" 
+                type="email" 
+                required 
+                value={formState.email}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="space-y-2">
@@ -154,7 +263,12 @@ export default function Contact() {
                   t("電話番号", "", "Phone Number")
                 )}
               </Label>
-              <Input id="phone" type="tel" />
+              <Input 
+                id="phone" 
+                type="tel" 
+                value={formState.phone}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="space-y-2">
@@ -168,7 +282,12 @@ export default function Contact() {
                 )}{" "}
                 <span className="text-red-500">*</span>
               </Label>
-              <Input id="subject" required />
+              <Input 
+                id="subject" 
+                required 
+                value={formState.subject}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="space-y-2">
@@ -183,17 +302,33 @@ export default function Contact() {
                 )}{" "}
                 <span className="text-red-500">*</span>
               </Label>
-              <Textarea id="message" rows={6} required />
+              <Textarea 
+                id="message" 
+                rows={6} 
+                required 
+                value={formState.message}
+                onChange={handleChange}
+              />
             </div>
 
             <div className="flex justify-center">
-              <Button type="submit" className="bg-sky-600 hover:bg-sky-500 px-8">
-                {isEasyJapanese ? (
-                  <>
-                    <RubyText text="送信" ruby="そうしん" />
-                  </>
+              <Button 
+                type="submit" 
+                className="bg-sky-600 hover:bg-sky-500 px-8"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <><Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  {isEasyJapanese ? <><RubyText text="送信中" ruby="そうしんちゅう" /></> 
+                  : t("送信中...", "", "Sending...")}</>
                 ) : (
-                  t("送信する", "", "Submit")
+                  isEasyJapanese ? (
+                    <>
+                      <RubyText text="送信" ruby="そうしん" />
+                    </>
+                  ) : (
+                    t("送信する", "", "Submit")
+                  )
                 )}
               </Button>
             </div>
