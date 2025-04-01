@@ -1,0 +1,21 @@
+{
+  "name": "行政書士小川千尋事務所",
+  "short_name": "小川千尋事務所",
+  "description": "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+} 

@@ -1,0 +1,29 @@
+.cloud-border {
+  position: relative;
+  border-radius: 30px;
+}
+
+.cloud-border::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 5%;
+  right: 5%;
+  height: 30px;
+  background: white;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: -1;
+}
+
+.cloud-border::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+  right: 5%;
+  height: 30px;
+  background: white;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  z-index: -1;
+}
+
