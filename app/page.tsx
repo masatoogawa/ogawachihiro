@@ -16,7 +16,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-center py-4 md:py-8">
           <div>
             <Image
-              src="/portrait.jpg"
+              src="/portrait.webp"
               alt={t("小川千尋 行政書士", "小川千尋 行政書士", "Chihiro Ogawa Administrative Scrivener")}
               width={500}
               height={714}

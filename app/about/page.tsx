@@ -38,7 +38,7 @@ export default function About() {
               <div className="md:flex gap-6 items-start">
                 <div className="md:w-1/3 mb-4 md:mb-0">
                   <Image
-                    src="/portrait.jpg"
+                    src="/portrait.webp"
                     alt={t("小川千尋 行政書士", "小川千尋 行政書士", "Chihiro Ogawa Administrative Scrivener")}
                     width={400}
                     height={571}
