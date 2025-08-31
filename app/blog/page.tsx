@@ -1,74 +1,74 @@
-"use client"
-
-import { useLanguage } from "@/contexts/language-context"
-import { RubyText } from "@/components/ruby-text"
+import { getAllPosts } from "@/lib/blog"
+import Link from "next/link"
+import Image from "next/image"
 
 export default function Blog() {
-  const { t, isEasyJapanese } = useLanguage()
+  const posts = getAllPosts()
 
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-6 text-sky-600 border-b pb-2">
-        {isEasyJapanese ? <>ブログ</> : t("ブログ", "", "Blog")}
+        ブログ
       </h1>
 
-      <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-        <h2 className="text-xl font-semibold mb-4 text-sky-700">
-          {isEasyJapanese ? (
-            <>
-              コンテンツ
-              <RubyText text="準備中" ruby="じゅんびちゅう" />
-            </>
-          ) : (
-            t("コンテンツ準備中", "", "Content Coming Soon")
-          )}
-        </h2>
-        <p className="text-gray-600 mb-4">
-          {isEasyJapanese ? (
-            <>
-              <RubyText text="現在" ruby="げんざい" />
-              、ブログの
-              <RubyText text="内容" ruby="ないよう" />を<RubyText text="準備" ruby="じゅんび" />
-              しています。
-              <RubyText text="外国人" ruby="がいこくじん" />の<RubyText text="方" ruby="かた" />の
-              <RubyText text="在留資格" ruby="ざいりゅうしかく" />
-              <RubyText text="申請" ruby="しんせい" />や<RubyText text="会社" ruby="かいしゃ" />
-              <RubyText text="設立" ruby="せつりつ" />、<RubyText text="知的財産権" ruby="ちてきざいさんけん" />
-              についての
-              <RubyText text="役立" ruby="やくだ" />つ<RubyText text="情報" ruby="じょうほう" />
-              をもうすぐ
-              <RubyText text="公開" ruby="こうかい" />
-              します。
-            </>
-          ) : (
-            t(
-              "現在、ブログコンテンツを準備中です。外国人の方の在留資格申請や法人設立、知的財産権に関する有益な情報を近日中に公開予定です。",
-              "",
-              "Useful information on residence status applications for foreign people, establishment of corporation and intellectual property rights will be published soon.",
-            )
-          )}
-        </p>
-        <p className="text-gray-600">
-          {isEasyJapanese ? (
-            <>
-              しばらくお
-              <RubyText text="待" ruby="ま" />
-              ちください。
-              <RubyText text="最新情報" ruby="さいしんじょうほう" />
-              はSNSでも
-              <RubyText text="発信" ruby="はっしん" />
-              していきます。
-            </>
-          ) : (
-            t(
-              "しばらくお待ちください。最新情報はSNSでも発信していきます。",
-              "",
-              "Please stay tuned. We will also share the latest information on our social media.",
-            )
-          )}
-        </p>
-      </div>
+      {posts.length > 0 ? (
+        <div className="space-y-6">
+          {posts.map((post) => (
+            <article key={post.slug} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+              <Link href={`/blog/${post.slug}`} className="block">
+                {post.image && (
+                  <div className="relative h-96 bg-gray-100">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <div className="mb-2">
+                    <span className="text-sm text-gray-500">
+                      {new Date(post.date).toLocaleDateString("ja-JP", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric"
+                      })}
+                    </span>
+                    <span className="text-sm text-gray-500 ml-4">
+                      {post.author}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold mb-3 text-sky-700 hover:text-sky-800">
+                    {post.title}
+                  </h2>
+                  <p className="text-gray-600 mb-3 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-end">
+                    <span className="text-sky-600 hover:text-sky-700 text-sm font-semibold">
+                      続きを読む →
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+          <h2 className="text-xl font-semibold mb-4 text-sky-700">
+            コンテンツ準備中
+          </h2>
+          <p className="text-gray-600 mb-4">
+            現在、ブログコンテンツを準備中です。
+          </p>
+          <p className="text-sm text-gray-500">
+            記事を追加するには、<code className="bg-gray-100 px-2 py-1 rounded">content/blog/</code>ディレクトリに
+            Markdownファイル（.md）を配置してください。
+          </p>
+        </div>
+      )}
     </div>
   )
 }
-
