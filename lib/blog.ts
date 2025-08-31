@@ -2,13 +2,11 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-const contentDirectory = path.join(process.cwd(), 'content/blog')
-
-function processImagePaths(content: string, slug: string): string {
+function processImagePaths(content: string, language: string, slug: string): string {
   const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g
   return content.replace(imageRegex, (match, alt, src) => {
     if (!src.startsWith('http') && !src.startsWith('/')) {
-      const imagePath = `/content/blog/${slug}/${src}`
+      const imagePath = `/content/blog/${language}/${slug}/${src}`
       return `![${alt}](${imagePath})`
     }
     return match
@@ -25,7 +23,11 @@ export interface BlogPost {
   image?: string
 }
 
-export function getAllPosts(): BlogPost[] {
+export function getAllPosts(language: string = 'ja'): BlogPost[] {
+  // やさしい日本語と通常の日本語の場合はjpディレクトリを参照
+  const targetLang = (language === 'easy-ja' || language === 'ja') ? 'jp' : language
+  const contentDirectory = path.join(process.cwd(), 'content/blog', targetLang)
+  
   if (!fs.existsSync(contentDirectory)) {
     return []
   }
@@ -35,7 +37,6 @@ export function getAllPosts(): BlogPost[] {
 
   for (const entry of entries) {
     if (entry.isDirectory()) {
-      // ディレクトリベースの記事構造
       const slug = entry.name
       const postDir = path.join(contentDirectory, slug)
       const indexPath = path.join(postDir, 'index.md')
@@ -44,7 +45,7 @@ export function getAllPosts(): BlogPost[] {
         const fileContents = fs.readFileSync(indexPath, 'utf8')
         const { data, content } = matter(fileContents)
         
-        const processedContent = processImagePaths(content, slug)
+        const processedContent = processImagePaths(content, targetLang, slug)
 
         allPosts.push({
           slug,
@@ -52,28 +53,12 @@ export function getAllPosts(): BlogPost[] {
           excerpt: data.excerpt || '',
           content: processedContent,
           date: data.date || new Date().toISOString(),
-          author: data.author || '小川千博',
+          author: data.author || (targetLang === 'en' ? 'Chihiro Ogawa' : '小川千博'),
           image: data.image && !data.image.startsWith('http') && !data.image.startsWith('/') 
-            ? `/content/blog/${slug}/${data.image}`
+            ? `/content/blog/${targetLang}/${slug}/${data.image}`
             : data.image
         })
       }
-    } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
-      // 従来の単一ファイル構造（後方互換性のため）
-      const slug = entry.name.replace(/\.md$/, '')
-      const fullPath = path.join(contentDirectory, entry.name)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents)
-
-      allPosts.push({
-        slug,
-        title: data.title || '無題',
-        excerpt: data.excerpt || '',
-        content,
-        date: data.date || new Date().toISOString(),
-        author: data.author || '小川千博',
-        image: data.image
-      })
     }
   }
 
@@ -84,16 +69,17 @@ export function getAllPosts(): BlogPost[] {
   })
 }
 
-export function getPostBySlug(slug: string): BlogPost | null {
-  // まずディレクトリベースの記事を探す
-  const postDir = path.join(contentDirectory, slug)
+export function getPostBySlug(slug: string, language: string = 'ja'): BlogPost | null {
+  // やさしい日本語と通常の日本語の場合はjpディレクトリを参照
+  const targetLang = (language === 'easy-ja' || language === 'ja') ? 'jp' : language
+  const postDir = path.join(process.cwd(), 'content/blog', targetLang, slug)
   const indexPath = path.join(postDir, 'index.md')
   
   if (fs.existsSync(indexPath)) {
     const fileContents = fs.readFileSync(indexPath, 'utf8')
     const { data, content } = matter(fileContents)
     
-    const processedContent = processImagePaths(content, slug)
+    const processedContent = processImagePaths(content, targetLang, slug)
 
     return {
       slug,
@@ -101,28 +87,10 @@ export function getPostBySlug(slug: string): BlogPost | null {
       excerpt: data.excerpt || '',
       content: processedContent,
       date: data.date || new Date().toISOString(),
-      author: data.author || '小川千博',
+      author: data.author || (targetLang === 'en' ? 'Chihiro Ogawa' : '小川千博'),
       image: data.image && !data.image.startsWith('http') && !data.image.startsWith('/') 
-        ? `/content/blog/${slug}/${data.image}`
+        ? `/content/blog/${targetLang}/${slug}/${data.image}`
         : data.image
-    }
-  }
-  
-  // 従来の単一ファイル構造も確認（後方互換性のため）
-  const fullPath = path.join(contentDirectory, `${slug}.md`)
-  
-  if (fs.existsSync(fullPath)) {
-    const fileContents = fs.readFileSync(fullPath, 'utf8')
-    const { data, content } = matter(fileContents)
-
-    return {
-      slug,
-      title: data.title || '無題',
-      excerpt: data.excerpt || '',
-      content,
-      date: data.date || new Date().toISOString(),
-      author: data.author || '小川千博',
-      image: data.image
     }
   }
 

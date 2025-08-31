@@ -1,14 +1,30 @@
+"use client"
+
+import { useLanguage } from "@/contexts/language-context"
 import { getAllPosts } from "@/lib/blog"
 import Link from "next/link"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+import { BlogPost } from "@/lib/blog"
 
 export default function Blog() {
-  const posts = getAllPosts()
+  const { language } = useLanguage()
+  const [posts, setPosts] = useState<BlogPost[]>([])
+
+  useEffect(() => {
+    // クライアントサイドで言語に応じた記事を取得
+    const fetchPosts = async () => {
+      const response = await fetch(`/api/blog/posts?lang=${language}`)
+      const data = await response.json()
+      setPosts(data)
+    }
+    fetchPosts()
+  }, [language])
 
   return (
     <div className="max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-6 text-sky-600 border-b pb-2">
-        ブログ
+        {language === 'en' ? 'Blog' : 'ブログ'}
       </h1>
 
       {posts.length > 0 ? (
@@ -29,11 +45,14 @@ export default function Blog() {
                 <div className="p-6">
                   <div className="mb-2">
                     <span className="text-sm text-gray-500">
-                      {new Date(post.date).toLocaleDateString("ja-JP", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric"
-                      })}
+                      {new Date(post.date).toLocaleDateString(
+                        language === "en" ? "en-US" : "ja-JP",
+                        {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric"
+                        }
+                      )}
                     </span>
                     <span className="text-sm text-gray-500 ml-4">
                       {post.author}
@@ -47,7 +66,7 @@ export default function Blog() {
                   </p>
                   <div className="flex items-center justify-end">
                     <span className="text-sky-600 hover:text-sky-700 text-sm font-semibold">
-                      続きを読む →
+                      {language === 'en' ? 'Read more →' : '続きを読む →'}
                     </span>
                   </div>
                 </div>
@@ -58,14 +77,12 @@ export default function Blog() {
       ) : (
         <div className="bg-white p-8 rounded-lg shadow-sm text-center">
           <h2 className="text-xl font-semibold mb-4 text-sky-700">
-            コンテンツ準備中
+            {language === 'en' ? 'Content Coming Soon' : 'コンテンツ準備中'}
           </h2>
           <p className="text-gray-600 mb-4">
-            現在、ブログコンテンツを準備中です。
-          </p>
-          <p className="text-sm text-gray-500">
-            記事を追加するには、<code className="bg-gray-100 px-2 py-1 rounded">content/blog/</code>ディレクトリに
-            Markdownファイル（.md）を配置してください。
+            {language === 'en' 
+              ? 'Blog content is currently being prepared.'
+              : '現在、ブログコンテンツを準備中です。'}
           </p>
         </div>
       )}

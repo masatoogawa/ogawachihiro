@@ -1,20 +1,45 @@
-import { getPostBySlug, getAllPosts } from "@/lib/blog"
+"use client"
+
+import { useLanguage } from "@/contexts/language-context"
+import { getPostBySlug } from "@/lib/blog"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import Image from "next/image"
+import { useEffect, useState } from "react"
+import { BlogPost } from "@/lib/blog"
 
-export async function generateStaticParams() {
-  const posts = getAllPosts()
-  return posts.map((post) => ({
-    id: post.slug,
-  }))
-}
+export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
+  const { language } = useLanguage()
+  const [post, setPost] = useState<BlogPost | null>(null)
+  const [slug, setSlug] = useState<string>("")
+  const [loading, setLoading] = useState(true)
 
-export default async function BlogPost({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
-  const post = getPostBySlug(id)
+  useEffect(() => {
+    const fetchPost = async () => {
+      const { id } = await params
+      setSlug(id)
+      
+      const response = await fetch(`/api/blog/post?slug=${id}&lang=${language}`)
+      if (response.ok) {
+        const data = await response.json()
+        setPost(data)
+      } else {
+        setPost(null)
+      }
+      setLoading(false)
+    }
+    fetchPost()
+  }, [params, language])
+
+  if (loading) {
+    return (
+      <div className="max-w-4xl mx-auto p-8 text-center">
+        <p>{language === 'en' ? 'Loading...' : '読み込み中...'}</p>
+      </div>
+    )
+  }
 
   if (!post) {
     notFound()
@@ -27,7 +52,7 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           href="/blog"
           className="text-sky-600 hover:text-sky-700 text-sm font-semibold inline-flex items-center"
         >
-          ← ブログ一覧に戻る
+          ← {language === 'en' ? 'Back to Blog' : 'ブログ一覧に戻る'}
         </Link>
       </div>
 
@@ -39,11 +64,14 @@ export default async function BlogPost({ params }: { params: Promise<{ id: strin
           <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
             <div>
               <span className="mr-4">
-                {new Date(post.date).toLocaleDateString("ja-JP", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric"
-                })}
+                {new Date(post.date).toLocaleDateString(
+                  language === "en" ? "en-US" : "ja-JP",
+                  {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  }
+                )}
               </span>
               <span>{post.author}</span>
             </div>
