@@ -24,10 +24,11 @@ function getMimeType(ext: string): string {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { path: string[] } }
+  { params }: { params: Promise<{ path: string[] }> }
 ) {
   try {
-    const filePath = path.join(process.cwd(), 'content', 'blog', ...params.path)
+    const { path: pathSegments } = await params
+    const filePath = path.join(process.cwd(), 'content', 'blog', ...pathSegments)
     
     // セキュリティチェック: パストラバーサル攻撃を防ぐ
     const normalizedPath = path.normalize(filePath)
