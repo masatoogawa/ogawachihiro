@@ -1,7 +1,6 @@
 "use client"
 
 import { useLanguage } from "@/contexts/language-context"
-import { getAllPosts } from "@/lib/blog"
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from "react"

@@ -1,7 +1,6 @@
 "use client"
 
 import { useLanguage } from "@/contexts/language-context"
-import { getPostBySlug } from "@/lib/blog"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
@@ -13,13 +12,11 @@ import { BlogPost } from "@/lib/blog"
 export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { language } = useLanguage()
   const [post, setPost] = useState<BlogPost | null>(null)
-  const [slug, setSlug] = useState<string>("")
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchPost = async () => {
       const { id } = await params
-      setSlug(id)
       
       const response = await fetch(`/api/blog/post?slug=${id}&lang=${language}`)
       if (response.ok) {
