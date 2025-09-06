@@ -20,4 +20,4 @@ image: "IMG_1449.jpeg"
 
 ![一般社団法人設立について](title.png)
 
-**📄 [こちらをクリックして資料のPDFを表示する](/content/blog/jp/test/corporation-guide.pdf)**
+**📄 [こちらをクリックして資料のPDFを表示する](/content/blog/jp/08312025/corporation-guide.pdf)**
