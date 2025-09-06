@@ -9,13 +9,16 @@ import { BlogPost } from "@/lib/blog"
 export default function Blog() {
   const { language } = useLanguage()
   const [posts, setPosts] = useState<BlogPost[]>([])
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     // クライアントサイドで言語に応じた記事を取得
     const fetchPosts = async () => {
+      setIsLoading(true)
       const response = await fetch(`/api/blog/posts?lang=${language}`)
       const data = await response.json()
       setPosts(data)
+      setIsLoading(false)
     }
     fetchPosts()
   }, [language])
@@ -26,7 +29,13 @@ export default function Blog() {
         {language === 'en' ? 'Blog' : 'ブログ'}
       </h1>
 
-      {posts.length > 0 ? (
+      {isLoading ? (
+        <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+          <p className="text-gray-600">
+            {language === 'en' ? 'Loading...' : '読み込み中...'}
+          </p>
+        </div>
+      ) : (
         <div className="space-y-6">
           {posts.map((post) => (
             <article key={post.slug} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
@@ -72,17 +81,6 @@ export default function Blog() {
               </Link>
             </article>
           ))}
-        </div>
-      ) : (
-        <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-          <h2 className="text-xl font-semibold mb-4 text-sky-700">
-            {language === 'en' ? 'Content Coming Soon' : 'コンテンツ準備中'}
-          </h2>
-          <p className="text-gray-600 mb-4">
-            {language === 'en' 
-              ? 'Blog content is currently being prepared.'
-              : '現在、ブログコンテンツを準備中です。'}
-          </p>
         </div>
       )}
     </div>
