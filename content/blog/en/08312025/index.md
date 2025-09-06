@@ -20,4 +20,4 @@ The type of corporation you establish (ex: a general incorporated association, a
 
 ![General Incorporated Association Guide](title.png)
 
-**📄 [Click here to view the presentation PDF](/content/blog/en/test/corporation-guide.pdf)**
+**📄 [Click here to view the presentation PDF](/content/blog/en/08312025/corporation-guide.pdf)**
