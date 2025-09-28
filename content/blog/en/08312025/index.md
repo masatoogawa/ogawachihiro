@@ -3,7 +3,7 @@ title: "Legal Professionals Lightning Talks!"
 excerpt: "I planned and held a study session giving presentations each other with other lawyers. My own presentation was a great experience and I learned a lot..."
 date: "2025-08-31"
 author: "Chihiro Ogawa"
-image: "IMG_1449.jpeg"
+image: "/blog/08312025/IMG_1449.jpeg"
 ---
 
 I planned and held a study session giving presentations each other with other lawyers. My own presentation was a great experience and I learned a lot from the presentations given by the other lawyers. I would like to continue holding these events on a regular basis from now on.
