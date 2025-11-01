@@ -33,17 +33,14 @@ export default function Home() {
                     <RubyText text="申請" ruby="しんせい" />
                   </span>
                   <span className="block">
-                    <RubyText text="経営者" ruby="けいえいしゃ" />の
-                    <RubyText text="外国人" ruby="がいこくじん" />
-                    <RubyText text="雇用" ruby="こよう" />
-                    <RubyText text="支援" ruby="しえん" />
+                    <RubyText text="著作権" ruby="ちょさくけん" />
                   </span>
                 </>
               ) : (
                 t(
-                  "外国人の在留資格・VISA申請、経営者の外国人雇用のサポート",
+                  "外国人の在留資格・VISA申請、著作権",
                   "",
-                  "Immigration & VISA Support for Foreign Nationals"
+                  "Immigration & VISA Support, Copyrights"
                 )
               )}
             </h1>
@@ -93,17 +90,6 @@ export default function Home() {
                 <li>
                   {isEasyJapanese ? (
                     <>
-                      <RubyText text="会社" ruby="かいしゃ" />を
-                      <RubyText text="作" ruby="つく" />る
-                      <RubyText text="手伝" ruby="てつだ" />い
-                    </>
-                  ) : (
-                    t("法人設立", "", "Establishment of Corporation")
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
                       <RubyText text="特許" ruby="とっきょ" />や
                       <RubyText text="著作権" ruby="ちょさくけん" />
                       などの
@@ -115,6 +101,17 @@ export default function Home() {
                       "",
                       "Intellectual Property Rights (Industrial Properties, Copyrights)",
                     )
+                  )}
+                </li>
+                <li>
+                  {isEasyJapanese ? (
+                    <>
+                      <RubyText text="会社" ruby="かいしゃ" />を
+                      <RubyText text="作" ruby="つく" />る
+                      <RubyText text="手伝" ruby="てつだ" />い
+                    </>
+                  ) : (
+                    t("法人設立", "", "Establishment of Corporation")
                   )}
                 </li>
               </ul>

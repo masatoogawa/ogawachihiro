@@ -118,6 +118,44 @@ export default function About() {
                       )
                     )}
                   </p>
+                  <p className="mb-4">
+                    {isEasyJapanese ? (
+                      <>
+                        また、
+                        <RubyText text="長年" ruby="ながねん" />の
+                        <RubyText text="特許事務" ruby="とっきょじむ" />
+                        <RubyText text="経験" ruby="けいけん" />を
+                        <RubyText text="活" ruby="い" />かし、
+                        <RubyText text="著作権" ruby="ちょさくけん" />に
+                        <RubyText text="関" ruby="かん" />する
+                        <RubyText text="相談" ruby="そうだん" />、
+                        <RubyText text="登録申請" ruby="とうろくしんせい" />、
+                        <RubyText text="契約書作成" ruby="けいやくしょさくせい" />も
+                        <RubyText text="得意" ruby="とくい" />としております。クリエイターの
+                        <RubyText text="方々" ruby="かたがた" />や
+                        <RubyText text="企業様" ruby="きぎょうさま" />の
+                        <RubyText text="大切" ruby="たいせつ" />な
+                        <RubyText text="知的財産" ruby="ちてきざいさん" />である
+                        <RubyText text="著作物" ruby="ちょさくぶつ" />を
+                        <RubyText text="法的" ruby="ほうてき" />にしっかりと
+                        <RubyText text="保護" ruby="ほご" />し、
+                        <RubyText text="安心" ruby="あんしん" />して
+                        <RubyText text="創作活動" ruby="そうさくかつどう" />やビジネスに
+                        <RubyText text="取" ruby="と" />り
+                        <RubyText text="組" ruby="く" />めるよう、
+                        <RubyText text="実務経験" ruby="じつむけいけん" />に
+                        <RubyText text="基" ruby="もと" />づいた
+                        <RubyText text="適切" ruby="てきせつ" />なサポートを
+                        <RubyText text="提供" ruby="ていきょう" />いたします。
+                      </>
+                    ) : (
+                      t(
+                        "また、長年の特許事務経験を活かし、著作権に関するご相談、登録申請、契約書作成も得意としております。クリエイターの方々や企業様の大切な知的財産である著作物を法的にしっかりと保護し、安心して創作活動やビジネスに取り組めるよう、実務経験に基づいた適切なサポートを提供いたします。",
+                        "",
+                        "Furthermore, leveraging my extensive experience in patent administration, I specialize in providing consultation, registration applications and contract drafting services for copyrights. I offer appropriate support based on my practical experience to ensure that creators and businesses can legally and securely protect their valuable intellectual property, allowing them to focus confidently on their creative activities and business endeavors.",
+                      )
+                    )}
+                  </p>
                   <p>
                     {isEasyJapanese ? (
                       <>
@@ -176,6 +214,35 @@ export default function About() {
                 <li>
                   {isEasyJapanese ? (
                     <>
+                      <RubyText text="日本行政書士会連合会" ruby="にほんぎょうせいしょしかいれんごうかい" />
+                      <RubyText text="著作権相談員" ruby="ちょさくけんそうだんいん" />
+                    </>
+                  ) : (
+                    t(
+                      "日本行政書士会連合会著作権相談員",
+                      "",
+                      "Copyright Consultant (Japan Federation of Administrative Scrivener's Associations)",
+                    )
+                  )}
+                </li>
+                <li>
+                  {isEasyJapanese ? (
+                    <>
+                      <RubyText text="二級知的財産" ruby="にきゅうちてきざいさん" />
+                      <RubyText text="管理技能士" ruby="かんりぎのうし" />（
+                      <RubyText text="管理業務" ruby="かんりぎょうむ" />）
+                    </>
+                  ) : (
+                    t(
+                      "二級知的財産管理技能士（管理業務）",
+                      "",
+                      "2nd grade Certified Specialist of Intellectual Property Management（administration）",
+                    )
+                  )}
+                </li>
+                <li>
+                  {isEasyJapanese ? (
+                    <>
                       <RubyText text="家族" ruby="かぞく" />：<RubyText text="夫" ruby="おっと" />、
                       <RubyText text="息子" ruby="むすこ" />2<RubyText text="人" ruby="にん" />
                     </>
@@ -187,10 +254,10 @@ export default function About() {
                   {isEasyJapanese ? (
                     <>
                       <RubyText text="趣味" ruby="しゅみ" />
-                      ：フラメンコ、ヨガ
+                      ：フラメンコ
                     </>
                   ) : (
-                    t("趣味：フラメンコ、ヨガ", "", "Hobby: Flamenco and Yoga")
+                    t("趣味：フラメンコ", "", "Hobby: Flamenco")
                   )}
                 </li>
               </ul>
@@ -419,17 +486,6 @@ export default function About() {
               <li>
                 {isEasyJapanese ? (
                   <>
-                    <RubyText text="法人設立" ruby="ほうじんせつりつ" />（<RubyText text="会社" ruby="かいしゃ" />を
-                    <RubyText text="作" ruby="つく" />
-                    ること）
-                  </>
-                ) : (
-                  t("法人設立", "", "Establishment of Corporation")
-                )}
-              </li>
-              <li>
-                {isEasyJapanese ? (
-                  <>
                     <RubyText text="知的財産権" ruby="ちてきざいさんけん" />（
                     <RubyText text="特許権" ruby="とっきょけん" />
                     などの
@@ -442,6 +498,17 @@ export default function About() {
                     "",
                     "Intellectual Property Rights (Industrial Properties, Copyrights)",
                   )
+                )}
+              </li>
+              <li>
+                {isEasyJapanese ? (
+                  <>
+                    <RubyText text="法人設立" ruby="ほうじんせつりつ" />（<RubyText text="会社" ruby="かいしゃ" />を
+                    <RubyText text="作" ruby="つく" />
+                    ること）
+                  </>
+                ) : (
+                  t("法人設立", "", "Establishment of Corporation")
                 )}
               </li>
             </ul>
