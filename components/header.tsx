@@ -68,7 +68,7 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/logo.jpeg"
+              src="/logo.png"
               alt="OGAWA Logo"
               width={40}
               height={40}

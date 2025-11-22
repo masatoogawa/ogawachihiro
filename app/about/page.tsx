@@ -183,84 +183,97 @@ export default function About() {
               )}
             </h2>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <ul className="space-y-2">
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="長崎県" ruby="ながさきけん" />
-                      <RubyText text="長崎市" ruby="ながさきし" />
-                      <RubyText text="出身" ruby="しゅっしん" />
-                    </>
-                  ) : (
-                    t("長崎県長崎市出身", "", "Born in Nagasaki city, Nagasaki prefecture")
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="上智大学" ruby="じょうちだいがく" />
-                      <RubyText text="外国語学部" ruby="がいこくごがくぶ" />
-                      <RubyText text="英語学科" ruby="えいごがっか" />
-                      <RubyText text="卒業" ruby="そつぎょう" />
-                    </>
-                  ) : (
-                    t(
-                      "上智大学外国語学部英語学科卒業",
-                      "",
-                      "Graduated from English Language Department at Sophia University",
-                    )
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="日本行政書士会連合会" ruby="にほんぎょうせいしょしかいれんごうかい" />
-                      <RubyText text="著作権相談員" ruby="ちょさくけんそうだんいん" />
-                    </>
-                  ) : (
-                    t(
-                      "日本行政書士会連合会著作権相談員",
-                      "",
-                      "Copyright Consultant (Japan Federation of Administrative Scrivener's Associations)",
-                    )
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="二級知的財産" ruby="にきゅうちてきざいさん" />
-                      <RubyText text="管理技能士" ruby="かんりぎのうし" />（
-                      <RubyText text="管理業務" ruby="かんりぎょうむ" />）
-                    </>
-                  ) : (
-                    t(
-                      "二級知的財産管理技能士（管理業務）",
-                      "",
-                      "2nd grade Certified Specialist of Intellectual Property Management（administration）",
-                    )
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="家族" ruby="かぞく" />：<RubyText text="夫" ruby="おっと" />、
-                      <RubyText text="息子" ruby="むすこ" />2<RubyText text="人" ruby="にん" />
-                    </>
-                  ) : (
-                    t("家族：夫、息子2人", "", "Family: Husband and two sons")
-                  )}
-                </li>
-                <li>
-                  {isEasyJapanese ? (
-                    <>
-                      <RubyText text="趣味" ruby="しゅみ" />
-                      ：フラメンコ
-                    </>
-                  ) : (
-                    t("趣味：フラメンコ", "", "Hobby: Flamenco")
-                  )}
-                </li>
-              </ul>
+              <div className="md:flex gap-6 items-start">
+                <div className="md:w-2/3 mb-4 md:mb-0">
+                  <ul className="space-y-2">
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="長崎県" ruby="ながさきけん" />
+                          <RubyText text="長崎市" ruby="ながさきし" />
+                          <RubyText text="出身" ruby="しゅっしん" />
+                        </>
+                      ) : (
+                        t("長崎県長崎市出身", "", "Born in Nagasaki city, Nagasaki prefecture")
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="上智大学" ruby="じょうちだいがく" />
+                          <RubyText text="外国語学部" ruby="がいこくごがくぶ" />
+                          <RubyText text="英語学科" ruby="えいごがっか" />
+                          <RubyText text="卒業" ruby="そつぎょう" />
+                        </>
+                      ) : (
+                        t(
+                          "上智大学外国語学部英語学科卒業",
+                          "",
+                          "Graduated from English Language Department at Sophia University",
+                        )
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="日本行政書士会連合会" ruby="にほんぎょうせいしょしかいれんごうかい" />
+                          <RubyText text="著作権相談員" ruby="ちょさくけんそうだんいん" />
+                        </>
+                      ) : (
+                        t(
+                          "日本行政書士会連合会著作権相談員",
+                          "",
+                          "Copyright Consultant (Japan Federation of Administrative Scrivener's Associations)",
+                        )
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="二級知的財産" ruby="にきゅうちてきざいさん" />
+                          <RubyText text="管理技能士" ruby="かんりぎのうし" />（
+                          <RubyText text="管理業務" ruby="かんりぎょうむ" />）
+                        </>
+                      ) : (
+                        t(
+                          "二級知的財産管理技能士（管理業務）",
+                          "",
+                          "2nd grade Certified Specialist of Intellectual Property Management（administration）",
+                        )
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="家族" ruby="かぞく" />：<RubyText text="夫" ruby="おっと" />、
+                          <RubyText text="息子" ruby="むすこ" />2<RubyText text="人" ruby="にん" />
+                        </>
+                      ) : (
+                        t("家族：夫、息子2人", "", "Family: Husband and two sons")
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="趣味" ruby="しゅみ" />
+                          ：フラメンコ
+                        </>
+                      ) : (
+                        t("趣味：フラメンコ", "", "Hobby: Flamenco")
+                      )}
+                    </li>
+                  </ul>
+                </div>
+                <div className="md:w-1/3">
+                  <Image
+                    src="/flamenco.png"
+                    alt={t("フラメンコ", "フラメンコ", "Flamenco")}
+                    width={400}
+                    height={400}
+                    className="rounded-lg shadow-md mx-auto object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
