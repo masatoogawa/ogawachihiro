@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     siteName: "行政書士小川千尋事務所",
     images: [
       {
-        url: "/icon.svg",
-        width: 32,
-        height: 32,
+        url: "/logo.png",
+        width: 1200,
+        height: 1200,
         alt: "OGAWA Logo",
       },
     ],
@@ -31,12 +31,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "行政書士小川千尋事務所",
     description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
-    images: ["/icon.svg"],
+    images: ["/logo.png"],
   },
   icons: {
     icon: [
-      { url: 'icon.svg', type: 'image/svg+xml' },
-      { url: 'favicon.ico', type: 'image/x-icon' },
+      { url: 'icon.png', type: 'image/png' },
     ],
     apple: [
       { url: 'apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
