@@ -213,6 +213,31 @@ export default function About() {
                         )
                       )}
                     </li>
+                  </ul>
+
+                  <ul className="space-y-2 mt-8">
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="特定行政書士" ruby="とくていぎょうせいしょし" />
+                        </>
+                      ) : (
+                        t(
+                          "特定行政書士",
+                          "",
+                          "Certified Administrative Procedures Legal Specialist authorized to represent clients in administrative appeals",
+                        )
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="申請取次行政書士" ruby="しんせいとりつぎぎょうせいしょし" />
+                        </>
+                      ) : (
+                        t("申請取次行政書士", "", "Immigration Lawyer")
+                      )}
+                    </li>
                     <li>
                       {isEasyJapanese ? (
                         <>
@@ -242,6 +267,23 @@ export default function About() {
                         )
                       )}
                     </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
+                          <RubyText text="不当要求防止責任者講習" ruby="ふとうようきゅうぼうしせきにんしゃこうしゅう" />
+                          <RubyText text="修了者" ruby="しゅうりょうしゃ" />
+                        </>
+                      ) : (
+                        t(
+                          "不当要求防止責任者講習修了者",
+                          "",
+                          "Certified Manager for Prevention of Unjust Demands",
+                        )
+                      )}
+                    </li>
+                  </ul>
+
+                  <ul className="space-y-2 mt-8">
                     <li>
                       {isEasyJapanese ? (
                         <>
