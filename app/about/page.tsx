@@ -241,6 +241,15 @@ export default function About() {
                     <li>
                       {isEasyJapanese ? (
                         <>
+                          <RubyText text="外部監査人" ruby="がいぶかんさにん" />
+                        </>
+                      ) : (
+                        t("外部監査人", "", "External Auditor")
+                      )}
+                    </li>
+                    <li>
+                      {isEasyJapanese ? (
+                        <>
                           <RubyText text="日本行政書士会連合会" ruby="にほんぎょうせいしょしかいれんごうかい" />
                           <RubyText text="著作権相談員" ruby="ちょさくけんそうだんいん" />
                         </>
