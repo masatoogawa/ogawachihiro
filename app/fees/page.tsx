@@ -227,13 +227,13 @@ export default function Fees() {
                       {isEasyJapanese ? (
                         <>
                           <span style={{ display: 'inline-block', maxWidth: '100%', wordBreak: 'break-all' }}>
-                            120,000
+                            150,000
                             <RubyText text="円" ruby="えん" />
                             から
                           </span>
                         </>
                       ) : (
-                        t("120,000円〜", "", "¥120,000〜")
+                        t("150,000円〜", "", "¥150,000〜")
                       )}
                     </td>
                   </tr>
