@@ -124,6 +124,16 @@ export default function BlogPostPage({ params }: { params: Promise<{ id: string 
                   {children}
                 </em>
               ),
+              a: ({ href, children }) => (
+                <a
+                  href={href}
+                  className="text-sky-600 underline hover:text-sky-800"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {children}
+                </a>
+              ),
               blockquote: ({ children }) => (
                 <blockquote className="border-l-4 border-sky-200 pl-4 my-4 italic text-gray-600">
                   {children}
