@@ -117,28 +117,6 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* 英語対応の案内 */}
-            <div className="bg-sky-50 p-3 sm:p-4 rounded-lg border-l-4 border-sky-500 mb-4 md:mb-6 text-sm sm:text-base">
-              <p className="font-medium text-sky-800">
-                {isEasyJapanese ? (
-                  <>
-                    <RubyText text="英語" ruby="えいご" />も
-                    <RubyText text="話" ruby="はな" />
-                    せます。
-                    <RubyText text="気軽" ruby="きがる" />に
-                    <RubyText text="連絡" ruby="れんらく" />
-                    してください。
-                  </>
-                ) : (
-                  t(
-                    "英語対応可能です。お気軽にお問い合わせください。",
-                    "",
-                    "English support available. Feel free to contact us.",
-                  )
-                )}
-              </p>
-            </div>
-
             <Link href="/contact">
               <Button className="w-full bg-sky-600 hover:bg-sky-500 mb-4 text-sm sm:text-base py-2 h-auto">
                 {isEasyJapanese ? (
