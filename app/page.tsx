@@ -228,12 +228,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t text-right">
+        <div className="mt-6 pt-4 border-t text-right flex flex-wrap justify-end gap-x-4 gap-y-2">
           <Link
             href="/customer-harassment-policy"
             className="text-sm text-sky-600 hover:underline"
           >
             カスタマーハラスメントに対する基本方針
+          </Link>
+          <Link
+            href="/customer-harassment-prevention"
+            className="text-sm text-sky-600 hover:underline"
+          >
+            カスタマーハラスメント防止に向けた取り組みについて
           </Link>
         </div>
       </div>
