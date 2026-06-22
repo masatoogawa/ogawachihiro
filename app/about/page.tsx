@@ -495,34 +495,6 @@ export default function About() {
             <h2 className="text-xl font-semibold mb-3 text-sky-700">
               {isEasyJapanese ? (
                 <>
-                  <RubyText text="営業時間" ruby="えいぎょうじかん" />
-                </>
-              ) : (
-                t("営業時間", "", "Business Hours")
-              )}
-            </h2>
-            <p>
-              {isEasyJapanese ? (
-                <>
-                  <RubyText text="柔軟" ruby="じゅうなん" />に<RubyText text="対応" ruby="たいおう" />
-                  できます。まずは
-                  <RubyText text="連絡" ruby="れんらく" />
-                  してください。
-                </>
-              ) : (
-                t(
-                  "臨機応変に対応可能です。まずはご連絡ください。",
-                  "",
-                  "Flexible hours available. Please contact us first.",
-                )
-              )}
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-semibold mb-3 text-sky-700">
-              {isEasyJapanese ? (
-                <>
                   <RubyText text="主" ruby="おも" />な<RubyText text="業務内容" ruby="ぎょうむないよう" />
                 </>
               ) : (
