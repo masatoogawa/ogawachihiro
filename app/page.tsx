@@ -90,17 +90,10 @@ export default function Home() {
                 <li>
                   {isEasyJapanese ? (
                     <>
-                      <RubyText text="特許" ruby="とっきょ" />や
                       <RubyText text="著作権" ruby="ちょさくけん" />
-                      などの
-                      <RubyText text="手続" ruby="てつづ" />き
                     </>
                   ) : (
-                    t(
-                      "知的財産権（特許権等の産業財産権、著作権）",
-                      "",
-                      "Intellectual Property Rights (Industrial Properties, Copyrights)",
-                    )
+                    t("著作権", "", "Copyrights")
                   )}
                 </li>
                 <li>

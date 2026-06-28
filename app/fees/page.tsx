@@ -299,12 +299,10 @@ export default function Fees() {
             <h2 className="text-xl font-semibold mb-4 text-sky-700">
               {isEasyJapanese ? (
                 <>
-                  <RubyText text="特許" ruby="とっきょ" />や
-                  <RubyText text="著作権" ruby="ちょさくけん" />の
-                  <RubyText text="手続" ruby="てつづ" />き
+                  <RubyText text="著作権" ruby="ちょさくけん" />
                 </>
               ) : (
-                t("知的財産・著作権", "", "Industrial Properties, Copyrights")
+                t("著作権", "", "Copyrights")
               )}
             </h2>
             <div className="overflow-x-auto">
