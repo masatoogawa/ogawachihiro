@@ -3,13 +3,12 @@
 import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
 
-type Language = "ja" | "easy-ja" | "en"
+type Language = "ja" | "en"
 
 type LanguageContextType = {
   language: Language
   setLanguage: (language: Language) => void
-  t: (ja: string, easyJa: string, en: string) => string
-  isEasyJapanese: boolean
+  t: (ja: string, en: string) => string
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -22,7 +21,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true)
     const savedLanguage = localStorage.getItem("language") as Language
-    if (savedLanguage && ["ja", "easy-ja", "en"].includes(savedLanguage)) {
+    if (savedLanguage && ["ja", "en"].includes(savedLanguage)) {
       setLanguage(savedLanguage)
     }
   }, [])
@@ -34,29 +33,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       document.cookie = `language=${language}; path=/; max-age=31536000; SameSite=Lax`
 
       // HTML の lang 属性を更新
-      document.documentElement.lang = language === "easy-ja" ? "ja" : language
+      document.documentElement.lang = language
     }
   }, [language, mounted])
 
-  // やさしい日本語かどうかのフラグ
-  const isEasyJapanese = language === "easy-ja"
-
   // 翻訳関数
-  const t = (ja: string, easyJa: string, en: string) => {
-    switch (language) {
-      case "ja":
-        return ja
-      case "easy-ja":
-        return easyJa
-      case "en":
-        return en
-      default:
-        return ja
-    }
-  }
+  const t = (ja: string, en: string) => (language === "en" ? en : ja)
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t, isEasyJapanese }}>{children}</LanguageContext.Provider>
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
   )
 }
 
@@ -67,4 +52,3 @@ export function useLanguage() {
   }
   return context
 }
-

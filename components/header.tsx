@@ -16,11 +16,12 @@ export default function Header() {
   }
 
   const menuItems = [
-    { href: "/", label: t("TOP", "TOP", "HOME") },
-    { href: "/about", label: t("事務所概要", "事務所について", "About Us") },
-    { href: "/fees", label: t("ご利用料金", "料金", "Fees") },
-    { href: "/contact", label: t("お問い合わせ", "お問い合わせ", "Contact") },
-    { href: "/blog", label: t("ブログ", "ブログ", "Blog") },
+    { href: "/", label: t("TOP", "HOME") },
+    { href: "/about", label: t("事務所概要", "About Us") },
+    { href: "/administrative-services", label: t("行政書士実務部", "Administrative Scrivener Practice") },
+    { href: "/ip-management", label: t("知財事務マネジメント部", "IP Administration Management") },
+    { href: "/contact", label: t("お問い合わせ", "Contact") },
+    { href: "/blog", label: t("ブログ", "Blog") },
   ]
 
   return (
@@ -28,7 +29,7 @@ export default function Header() {
       <div className="bg-sky-600 text-white p-2 flex justify-between items-center">
         <div>
           <span className="text-sm">
-            {t("行政書士小川千尋事務所", "行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
+            {t("行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
           </span>
         </div>
         <div className="flex gap-2">
@@ -41,16 +42,6 @@ export default function Header() {
             }`}
           >
             日本語
-          </Button>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setLanguage("easy-ja")}
-            className={`text-white hover:text-white hover:bg-sky-700 px-2 py-1 h-auto ${
-              language === "easy-ja" ? "bg-sky-700" : ""
-            }`}
-          >
-            やさしい日本語
           </Button>
           <Button
             variant="ghost"
@@ -75,13 +66,13 @@ export default function Header() {
               className="rounded-full"
             />
             <span className="text-xl md:text-2xl font-bold">
-              {t("行政書士小川千尋事務所", "行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
+              {t("行政書士小川千尋事務所", "Chihiro Ogawa Administrative Scrivener Office")}
             </span>
           </Link>
 
           {/* デスクトップメニュー */}
           <nav className="hidden md:block">
-            <ul className="flex gap-8">
+            <ul className="flex gap-6">
               {menuItems.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="hover:text-sky-600 font-medium">
@@ -96,7 +87,7 @@ export default function Header() {
           <button
             className="md:hidden text-sky-600"
             onClick={toggleMenu}
-            aria-label={t("メニューを開く", "メニューを開く", "Open menu")}
+            aria-label={t("メニューを開く", "Open menu")}
           >
             <Menu size={24} />
           </button>
@@ -112,7 +103,7 @@ export default function Header() {
           {/* メニューコンテンツ */}
           <div className="relative bg-white bg-opacity-90 backdrop-blur-sm w-full max-w-sm ml-auto h-full shadow-xl">
             <div className="flex justify-end p-4">
-              <button onClick={toggleMenu} aria-label={t("メニューを閉じる", "メニューを閉じる", "Close menu")}>
+              <button onClick={toggleMenu} aria-label={t("メニューを閉じる", "Close menu")}>
                 <X size={24} className="text-sky-600" />
               </button>
             </div>
@@ -137,4 +128,3 @@ export default function Header() {
     </>
   )
 }
-
