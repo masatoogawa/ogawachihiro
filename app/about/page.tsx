@@ -491,64 +491,6 @@ export default function About() {
             </p>
           </section>
 
-          <section>
-            <h2 className="text-xl font-semibold mb-3 text-sky-700">
-              {isEasyJapanese ? (
-                <>
-                  <RubyText text="主" ruby="おも" />な<RubyText text="業務内容" ruby="ぎょうむないよう" />
-                </>
-              ) : (
-                t("主な業務内容", "", "Main Services")
-              )}
-            </h2>
-            <ul className="list-disc pl-5 space-y-2">
-              <li>
-                {isEasyJapanese ? (
-                  <>
-                    <RubyText text="外国人" ruby="がいこくじん" />の<RubyText text="方" ruby="かた" />の
-                    <RubyText text="在留" ruby="ざいりゅう" />
-                    <RubyText text="支援" ruby="しえん" />（<RubyText text="在留資格" ruby="ざいりゅうしかく" />
-                    ・ビザ、
-                    <RubyText text="帰化申請" ruby="きかしんせい" />）
-                  </>
-                ) : (
-                  t(
-                    "外国人の方の在留支援（在留資格・VISA、帰化申請）",
-                    "",
-                    "Immigration Support for Foreign People (Residence status/VISA, Naturalization)",
-                  )
-                )}
-              </li>
-              <li>
-                {isEasyJapanese ? (
-                  <>
-                    <RubyText text="知的財産権" ruby="ちてきざいさんけん" />（
-                    <RubyText text="特許権" ruby="とっきょけん" />
-                    などの
-                    <RubyText text="産業財産権" ruby="さんぎょうざいさんけん" />、
-                    <RubyText text="著作権" ruby="ちょさくけん" />）
-                  </>
-                ) : (
-                  t(
-                    "知的財産権（特許権等の産業財産権、著作権）",
-                    "",
-                    "Intellectual Property Rights (Industrial Properties, Copyrights)",
-                  )
-                )}
-              </li>
-              <li>
-                {isEasyJapanese ? (
-                  <>
-                    <RubyText text="法人設立" ruby="ほうじんせつりつ" />（<RubyText text="会社" ruby="かいしゃ" />を
-                    <RubyText text="作" ruby="つく" />
-                    ること）
-                  </>
-                ) : (
-                  t("法人設立", "", "Establishment of Corporation")
-                )}
-              </li>
-            </ul>
-          </section>
         </div>
       </div>
     </div>
