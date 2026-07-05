@@ -38,20 +38,20 @@ export default function About() {
                   </p>
                   <p>
                     {t(
-                      "私はこれまで、特許事務所において約18年間にわたり、特許・実用新案・意匠・商標といった知的財産権（知財）に関わる事務業務に深く携わってまいりました。主に、特許庁へ提出する各種書類の作成や手続き、お客様への正確な進捗報告、そしてミスが許されない期限管理の第一線を担ってまいりました。",
-                      "For approximately 18 years, I was deeply involved in administrative work related to intellectual property (IP) rights—patents, utility models, designs, and trademarks—at a patent firm. I was primarily on the front lines of preparing and filing documents with the Japan Patent Office, providing accurate progress reports to clients, and managing deadlines where no mistakes are permitted.",
+                      "私はこれまで、特許事務所において約18年間にわたり、特許・実用新案・意匠・商標といった知的財産権に関わる事務業務に深く携わってまいりました。主に、お客様への正確な進捗報告や、ミスが許されない厳格な期限管理、特許事務所内のバックオフィス業務の第一線を担ってまいりました。",
+                      "For approximately 18 years, I was deeply involved in administrative work related to intellectual property rights—patents, utility models, designs, and trademarks—at a patent firm. I was primarily on the front lines of providing accurate progress reports to clients, strict deadline management where no mistakes are permitted, and back-office operations within the patent firm.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "また、長年におよぶキャリアの中で知財事務部門の管理職（マネジメント職）も経験し、少人数から中規模の組織における事務フローの構築、所内システム部と連携したミスを防ぐデータベースの整備、スタッフの育成やマニュアル化、業務効率化を統括してまいりました。",
-                      "Over my long career, I also served as a manager in the IP administration department, overseeing the design of administrative workflows in small to mid-sized organizations, the development of error-preventing databases in cooperation with the in-house systems team, staff training and manualization, and operational efficiency.",
+                      "また、長年におよぶキャリアの中で知財事務部門の管理職（マネジメント職）も経験し、事務フローの構築、所内システム部と連携したミスを防ぐデータベースの整備、スタッフの育成やマニュアル化など、業務効率化とリスクマネジメントを統括してまいりました。",
+                      "Over my long career, I also served as a manager in the IP administration department, overseeing operational efficiency and risk management—including the design of administrative workflows, the development of error-preventing databases in cooperation with the in-house systems team, and staff training and manualization.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "この「知的財産に対する深い知識」と、長年のキャリアで培った「組織の事務リスクをコントロールするマネジメント力」が、現在の私の行政書士としての大きな強みであり、基盤となっています。",
-                      "This deep knowledge of intellectual property, together with the management skills to control an organization's administrative risks cultivated over my long career, is now my greatest strength and foundation as an administrative scrivener.",
+                      "この「知財事務業務への深い理解」と、「組織の事務リスクをコントロールするマネジメント力」が、現在の私の行政書士としての大きな強みであり、基盤となっています。",
+                      "This deep understanding of IP administrative operations, together with the management skills to control an organization's administrative risks, is now my greatest strength and foundation as an administrative scrivener.",
                     )}
                   </p>
                   <p>
@@ -73,21 +73,21 @@ export default function About() {
                       <span className="font-semibold">{t("「知財事務マネジメント部」", "“IP Administration Management Division”")}</span>
                       <br />
                       {t(
-                        "少人数の特許事務所様や弁理士の先生方の頼れるパートナーとして、これまでの管理職経験をフルに活かした知財事務のデータベース構築、業務フロー効率化・AI活用コンサルティング、実務アウトソーシングを担っています。",
-                        "As a reliable partner for small patent firms and patent attorneys, we provide IP administration database development, workflow efficiency and AI-utilization consulting, and practical outsourcing, fully leveraging our management experience.",
+                        "少人数の特許事務所様や弁理士の先生方の頼れるパートナーとして、これまでの知財事務経験・管理職経験をフルに活かした知財事務サポート、知財事務業務フローの効率化提案・AI活用コンサルティング等を担っています。",
+                        "As a reliable partner for small patent firms and patent attorneys, we provide IP administrative support, workflow-efficiency proposals, and AI-utilization consulting, fully leveraging our IP administration and management experience.",
                       )}
                     </li>
                   </ul>
                   <p>
                     {t(
-                      "知財に詳しく、弁理士との連携も強い行政書士として、御社の大切なアイデアや権利、ミスのない確実な事務体制を強固に守り抜く存在でありたいと願っています。",
-                      "As an administrative scrivener well-versed in IP and strongly connected with patent attorneys, I aspire to firmly protect your valuable ideas and rights, as well as a reliable, error-free administrative system.",
+                      "ミスが許されない環境で長年培った確実な事務経験を活かし、弁理士の先生方との連携も大切にしながら、皆様のビジネスを守る確実な契約・事務体制を強固に支える存在でありたいと願っています。",
+                      "Leveraging my extensive experience in high-stakes environments where precision is non-negotiable, I am dedicated to providing robust support for your contracts and administrative structures. Working in close collaboration with patent attorneys, my goal is to safeguard your business operations.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "「契約書をチェックしてほしい」「新しい事業の許可について聞きたい」「特許事務所の事務体制を抜本的に見直したい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
-                      "Whether it is “I’d like you to check a contract,” “I want to ask about a permit for a new business,” or “I want to fundamentally review my patent firm’s administrative system”—anything is welcome. Please feel free to contact us.",
+                      "「著作権の契約書をチェックしてほしい」「新しい事業の許可について聞きたい」「特許事務所のバックオフィス体制を効率化したい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
+                      "Please feel free to reach out to me for any assistance, such as: reviewing copyright agreements, consulting on business licensing and permits, or streamlining back-office operations for patent firms.",
                     )}
                   </p>
                 </div>
@@ -120,7 +120,6 @@ export default function About() {
                       )}
                     </li>
                     <li>{t("申請取次行政書士", "Immigration Lawyer")}</li>
-                    <li>{t("外部監査人", "External Auditor")}</li>
                     <li>
                       {t(
                         "日本行政書士会連合会著作権相談員",
@@ -173,14 +172,14 @@ export default function About() {
               <ul className="list-disc pl-5 space-y-3 leading-relaxed">
                 <li>
                   {t(
-                    "外国人スタッフが多く籍を置く、国際色豊かな大手の特許事務所（弁理士法人）にて約18年間にわたり勤務。日本国内だけでなく、海外のクライアント企業が特許・商標・意匠等の知的財産権を取得・維持するために必要な、特許庁への各種申請手続きや、正確かつ迅速な進捗報告、ミスの許されない期限管理の第一線に従事。",
-                    "Worked for approximately 18 years at a large, internationally diverse patent firm (patent professional corporation) employing many foreign staff. Engaged on the front lines of various filing procedures with the Japan Patent Office, accurate and prompt progress reporting, and zero-error deadline management required for both domestic and overseas client companies to obtain and maintain IP rights such as patents, trademarks, and designs.",
+                    "外国人スタッフが多く在籍する、国際色豊かな大手特許事務所にて約18年間、知財事務の専門職として勤務。日本国内だけでなく、海外のクライアント企業が特許・商標・意匠等の知的財産権を取得・維持するプロセスにおいて、事務フロントとして正確かつ迅速な進捗報告、ミスの許されない期限管理などの第一線に従事。",
+                    "Served for approximately 18 years as an intellectual property (IP) administrative specialist at a prominent, globally diverse patent firm with a large international staff. Managed front-facing administrative operations to support both domestic and international corporate clients in securing and maintaining patent, trademark, and design rights. Responsibilities included delivering accurate and prompt status reports, and handling high-stakes deadline management where zero errors were permitted.",
                   )}
                 </li>
                 <li>
                   {t(
-                    "実務の傍ら、知財事務部門の管理職（マネジメント職）として、全体のプロジェクト管理やスタッフの採用・育成を統括。さらに、業務効率化のためのマニュアル作成、所内のシステム部と連携したミスを未然に防ぐ期限管理データベースの構築など、組織のバックオフィス基盤の底上げに貢献。",
-                    "Alongside practical work, served as a manager in the IP administration department, overseeing overall project management and staff recruitment and training. Further contributed to strengthening the organization's back-office foundation by creating manuals for operational efficiency and building a deadline-management database—in cooperation with the in-house systems department—to prevent errors before they occur.",
+                    "実務の傍ら、知財事務部門の管理職（マネジメント職）として、全体の事務業務プロセス管理やスタッフの採用・育成を統括。さらに、業務効率化のためのマニュアル作成、所内システム部と連携したミスを未然に防ぐ期限管理データベースの構築など、組織のバックオフィス基盤の底上げに貢献。",
+                    "Concurrently served in a managerial role within the IP administration department, overseeing overall administrative workflow processes as well as staff recruitment and training. Significantly enhanced the organization’s back-office foundations by developing standardized operational manuals for increased efficiency and collaborating with the internal IT department to construct a deadline-tracking database designed to preemptively prevent errors.",
                   )}
                 </li>
               </ul>

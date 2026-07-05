@@ -7,7 +7,7 @@ import { MapPin, Mail, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -25,8 +25,8 @@ export default function Home() {
           <div>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-sky-600 mb-3 md:mb-4 leading-tight">
               {t(
-                "知的財産分野に強く、弁理士との連携体制も整った行政書士事務所です。",
-                "An administrative scrivener office with strong expertise in intellectual property and an established partnership network with patent attorneys.",
+                "ビジネスの基盤となる著作権管理や、各種契約書の作成（知財ライセンス・秘密保持等）を中心にサポートする行政書士事務所です。",
+                "We are an Administrative Scrivener (Gyoseishoshi) office specializing in support for business foundations, focusing on copyright management and the drafting of various contracts, including intellectual property (IP) licensing and non-disclosure agreements (NDAs).",
               )}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-sky-700 mb-3">
@@ -35,7 +35,7 @@ export default function Home() {
             <p className="text-sm sm:text-base text-gray-600 mb-4 md:mb-6">
               {t(
                 "18年の知財事務と管理職経験をベースに、皆様のビジネスと組織を堅実に支えます。",
-                "Backed by 18 years of IP practice and management experience, we provide solid support for your business and organization.",
+                "Backed by 18 years of IP administrative practice and management experience, we provide solid support for your business and organization.",
               )}
             </p>
 
@@ -55,8 +55,8 @@ export default function Home() {
         </h2>
         <p className="text-sm sm:text-base leading-relaxed">
           {t(
-            "特許事務所で18年間、特許庁への手続きや徹底した期限管理、そして管理職として事務フローの構築や業務効率化を統括してきました。この「知的財産に対する深い知識」と、長年のキャリアで培った「組織の事務リスクをコントロールするマネジメント力」を活かし、経営者の皆様と弁理士の先生方をスマートにバックアップいたします。",
-            "For 18 years at a patent firm, I handled procedures with the Japan Patent Office and rigorous deadline management, and as a manager I oversaw the design of administrative workflows and operational efficiency. Leveraging this deep knowledge of intellectual property and the management skills to control an organization's administrative risks, cultivated over my long career, I smartly support business owners and patent attorneys.",
+            "特許事務所で18年間、進捗報告や期限管理等の知財事務業務に携わり、管理職として事務フローの構築や業務効率化を統括してきました。この長年のキャリアで培った「知財事務業務への深い理解」と「組織の事務リスクをコントロールするマネジメント力」を活かし、経営者の皆様のビジネス基盤を強固にバックアップいたします。",
+            "With 18 years of experience at a patent firm, I have been deeply involved in IP administration—including progress reporting and strict deadline management—while overseeing workflow design and operational efficiency in a managerial role. Leveraging my deep understanding of IP administrative operations and proven risk-management skills, I am dedicated to providing robust legal support to strengthen your business foundation.",
           )}
         </p>
       </div>
@@ -99,8 +99,8 @@ export default function Home() {
             <ul className="space-y-2 list-disc pl-5 text-sm sm:text-base">
               <li>
                 {t(
-                  "特許事務所向け知財事務アウトソーシング（期限管理・書類起案等）",
-                  "IP administration outsourcing for patent firms (deadline management, document drafting, etc.)",
+                  "特許事務所様向け知財事務サポート（期限管理・進捗報告等）",
+                  "IP administrative support for patent firms (deadline management, preparing reports, etc.)",
                 )}
               </li>
               <li>
@@ -111,8 +111,8 @@ export default function Home() {
               </li>
               <li>
                 {t(
-                  "弁理士と連携した各種補助金申請（ものづくり補助金等）",
-                  "Various subsidy applications in cooperation with patent attorneys (Monozukuri Subsidy, etc.)",
+                  "弁理士と連携した各種補助金申請",
+                  "Various subsidy applications in cooperation with patent attorneys",
                 )}
               </li>
             </ul>
@@ -174,20 +174,22 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mt-6 pt-4 border-t text-right flex flex-wrap justify-end gap-x-4 gap-y-2">
-          <Link
-            href="/customer-harassment-policy"
-            className="text-sm text-sky-600 hover:underline"
-          >
-            カスタマーハラスメントに対する基本方針
-          </Link>
-          <Link
-            href="/customer-harassment-prevention"
-            className="text-sm text-sky-600 hover:underline"
-          >
-            カスタマーハラスメント防止に向けた取り組みについて
-          </Link>
-        </div>
+        {language !== "en" && (
+          <div className="mt-6 pt-4 border-t text-right flex flex-wrap justify-end gap-x-4 gap-y-2">
+            <Link
+              href="/customer-harassment-policy"
+              className="text-sm text-sky-600 hover:underline"
+            >
+              カスタマーハラスメントに対する基本方針
+            </Link>
+            <Link
+              href="/customer-harassment-prevention"
+              className="text-sm text-sky-600 hover:underline"
+            >
+              カスタマーハラスメント防止に向けた取り組みについて
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   )

@@ -18,8 +18,8 @@ export default function AdministrativeServices() {
           <section>
             <p className="leading-relaxed">
               {t(
-                "豊かな実務経験を持つ行政書士として、経営者の皆様のビジネスを堅実にサポートいたします。当事務所では、ホームページやデザイン、記事などのトラブルを防ぐ「著作権契約書」の作成や各種ライセンス契約、新事業をスムーズにスタートするための各種「許認可申請・法人設立」を専門的に手掛けています。「何から手をつければいいか分からない」「契約書のリーガルチェックだけ頼みたい」といった身近な疑問にも、分かりやすく丁寧にお応えします。御社のアイデアと権利を守り、安心してビジネスに専念できる環境を一緒に整えていきましょう。",
-                "As an administrative scrivener with extensive practical experience, I provide solid support for business owners. Our office specializes in drafting copyright agreements and various license contracts to prevent troubles over websites, designs, and articles, as well as the license/permit applications and company incorporation needed to smoothly launch a new business. We respond clearly and carefully to everyday questions such as “I don't know where to start” or “I just want a legal check of my contract.” Let's protect your ideas and rights together and build an environment where you can focus on your business with peace of mind.",
+                "豊かな実務経験を持つ行政書士として、経営者の皆様のビジネスを堅実にサポートいたします。当事務所では、ホームページやデザイン、記事などのトラブルを防ぐ「著作権契約書」の作成や各種ライセンス契約、新事業をスムーズにスタートするための各種「許認可申請・法人設立」を専門的に手掛けています。「何から手をつければいいか分からない」「契約書のチェックだけ頼みたい」といった身近な疑問にも、分かりやすく丁寧にお応えします。御社のアイデアと権利を守り、安心してビジネスに専念できる環境を一緒に整えていきましょう。",
+                "As an administrative scrivener with extensive practical experience, I provide solid support for business owners. Our office specializes in drafting copyright agreements and various license contracts to prevent troubles over websites, designs, and articles, as well as the license/permit applications and company incorporation needed to smoothly launch a new business. We respond clearly and carefully to everyday questions such as “I don't know where to start” or “I just want a check of my contract.” Let's protect your ideas and rights together and build an environment where you can focus on your business with peace of mind.",
               )}
             </p>
           </section>
@@ -35,8 +35,8 @@ export default function AdministrativeServices() {
                 </h3>
                 <p className="leading-relaxed">
                   {t(
-                    "業務委託契約書、秘密保持契約（NDA）、ライセンス契約など各種契約書の作成・リーガルチェックから、文化庁への著作権登録、著作権トラブル防止のご相談まで承ります。",
-                    "From drafting and legal-checking various contracts such as service agreements, non-disclosure agreements (NDAs), and license agreements, to copyright registration with the Agency for Cultural Affairs and consultations on preventing copyright troubles.",
+                    "業務委託契約書、秘密保持契約（NDA）、ライセンス契約など各種契約書の作成・チェック、文化庁への著作権登録などを承ります。",
+                    "We provide comprehensive services including the drafting and review of various agreements—such as service agreements (freelance/outsourcing contracts), non-disclosure agreements (NDAs), and licensing agreements—as well as handling copyright registration procedures with the Agency for Cultural Affairs.",
                   )}
                 </p>
               </div>
@@ -107,7 +107,7 @@ export default function AdministrativeServices() {
                       )}
                     </td>
                     <td className="py-2 px-4 border text-right whitespace-nowrap">
-                      {t("要相談（個別お見積）", "Please inquire (individual quote)")}
+                      {t("要相談（個別お見積）", "Price upon request (Individual quotation)")}
                     </td>
                   </tr>
                 </tbody>

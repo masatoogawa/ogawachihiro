@@ -18,8 +18,8 @@ export default function IpManagement() {
           <section>
             <p className="leading-relaxed">
               {t(
-                "18年の特許事務経験を活かし、弁理士の先生方の良きパートナーとして特許事務所のバックオフィスを堅実に支えます。期限管理のデータベース構築や、書類作成補助、事務フローの効率化・マニュアル化、AIツールを活用した業務改善まで、少人数の事務所様が抱える事務リスクをマネジメントによって解消します。先生方がコア業務である知財戦略・鑑定に集中できる環境を提供いたします。",
-                "Drawing on 18 years of patent administration experience, I provide solid support for the back office of patent firms as a trusted partner to patent attorneys. From building deadline-management databases and assisting with document preparation, to streamlining and manualizing administrative workflows and improving operations with AI tools, we resolve the administrative risks faced by small firms through management. We provide an environment where patent attorneys can focus on their core work of IP strategy and assessment.",
+                "18年の特許事務経験を活かし、弁理士の先生方の良きパートナーとして特許事務所のバックオフィスを堅実に支えます。期限管理のデータベース構築や、事務フローの効率化・マニュアル化、AIツールを活用した業務改善まで、少人数の事務所様が抱える事務リスクをマネジメントによって解消します。先生方がコア業務である知財戦略・鑑定・明細書作成に集中できる環境を提供いたします。",
+                "Leveraging my 18 years of experience in IP administration, I serve as a reliable partner to patent attorneys, providing steadfast support for your firm's back-office operations. From constructing deadline-tracking databases and streamlining/documenting administrative workflows to implementing AI-driven operational improvements, I eliminate administrative risks for boutique firms through professional management. This allows attorneys to focus entirely on their core competencies: IP strategy, expert opinions, and drafting patent specifications.",
               )}
             </p>
           </section>
@@ -32,14 +32,14 @@ export default function IpManagement() {
               <div>
                 <h3 className="font-semibold mb-1">
                   {t(
-                    "● 特許事務所向け知財事務アウトソーシング（期限管理・書類作成補助等）",
-                    "● IP administration outsourcing for patent firms (deadline management, document preparation support, etc.)",
+                    "● 特許事務所向け知財事務サポート（期限管理・報告書作成等）",
+                    "● IP Administrative Support for Patent Firms (Deadline Tracking, Reporting, etc.)",
                   )}
                 </h3>
                 <p className="leading-relaxed">
                   {t(
-                    "特許、実用新案、意匠、商標の出願実務に関わるバックオフィス業務の外部委託を承ります。18年の特許事務経験を活かし、弁理士の先生方の右腕として期限管理・書類作成補助等、事務業務全般をサポートします。",
-                    "We accept outsourcing of back-office work related to filing practice for patents, utility models, designs, and trademarks. Leveraging 18 years of patent administration experience, we support all administrative tasks—deadline management, document preparation assistance, and more—as a right-hand partner to patent attorneys.",
+                    "18年の特許事務経験を活かし、弁理士の先生方の右腕として、期限管理や報告書作成等の事務業務全般をサポートします。",
+                    "Leveraging 18 years of experience in IP administration, I serve as an extension of your team, providing comprehensive support for deadline tracking, status report preparation, and overall administrative workflows.",
                   )}
                 </p>
               </div>
@@ -47,27 +47,27 @@ export default function IpManagement() {
                 <h3 className="font-semibold mb-1">
                   {t(
                     "● 知財事務業務のフロー効率化・改善（マニュアル化・AI活用）",
-                    "● Workflow efficiency and improvement for IP administration (manualization, AI utilization)",
+                    "● Streamlining & Optimizing IP Administrative Workflows (Documentation & AI Utilization)",
                   )}
                 </h3>
                 <p className="leading-relaxed">
                   {t(
                     "少人数の特許事務所における知財事務フローの業務改善（DX化支援）、ミスを防ぐ期限管理データベースの構築、AIツールを活用した業務効率化や事務マニュアル作成をマネジメントします。",
-                    "We manage operational improvements for IP administration workflows at small patent firms (DX support), the building of error-preventing deadline-management databases, and operational efficiency and administrative-manual creation using AI tools.",
+                    "I manage operational improvements (DX support) for administrative workflows in boutique patent firms. This includes constructing error-preventing tracking databases, enhancing efficiency via AI tools, and developing standardized operational manuals.",
                   )}
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold mb-1">
                   {t(
-                    "● 弁理士と連携した各種補助金申請（ものづくり補助金等）",
-                    "● Various subsidy applications in cooperation with patent attorneys (Monozukuri Subsidy, etc.)",
+                    "● 弁理士の先生方と連携した各種補助金申請",
+                    "● Comprehensive Subsidy Application Support in Collaboration with Patent Attorneys",
                   )}
                 </h3>
                 <p className="leading-relaxed">
                   {t(
-                    "特許出願や知財戦略と連動した、ものづくり補助金などの各種公的補助金の申請を、提携する弁理士とワンストップで連携サポートします。",
-                    "In coordination with patent filings and IP strategy, we provide one-stop support for applications for various public subsidies such as the Monozukuri Subsidy, working together with partner patent attorneys.",
+                    "各種公的補助金の申請を、提携する弁理士とワンストップで連携サポートします。",
+                    "In close cooperation with partner patent attorneys, we provide streamlined, one-stop assistance for various public subsidy applications.",
                   )}
                 </p>
               </div>
