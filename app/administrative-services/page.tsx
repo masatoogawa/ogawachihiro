@@ -63,8 +63,8 @@ export default function AdministrativeServices() {
                 </h3>
                 <p className="leading-relaxed">
                   {t(
-                    "農産物のブランドを守る「種苗法に基づく品種登録出願」や「地理的表示（GI）保護制度」の申請支援など、ニッチな地域ブランド・農産物の権利保護に強みを持っています。",
-                    "We have particular strengths in protecting niche regional brands and agricultural products, including support for plant variety registration applications under the Plant Variety Protection and Seed Act and applications under the Geographical Indication (GI) protection system that safeguard agricultural product brands.",
+                    "農産物のブランドを守る「種苗法に基づく品種登録出願」や「地理的表示（GI）保護制度」の申請支援など、地域ブランド・農産物の権利保護に強みを持っています。",
+                    "We have particular strengths in protecting regional brands and agricultural products, including support for plant variety registration applications under the Plant Variety Protection and Seed Act and applications under the Geographical Indication (GI) protection system that safeguard agricultural product brands.",
                   )}
                 </p>
               </div>

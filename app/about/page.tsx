@@ -38,14 +38,14 @@ export default function About() {
                   </p>
                   <p>
                     {t(
-                      "私はこれまで、特許事務所において約18年間にわたり、特許・実用新案・意匠・商標といった知的財産権に関わる事務業務に深く携わってまいりました。主に、お客様への正確な進捗報告や、ミスが許されない厳格な期限管理、特許事務所内のバックオフィス業務の第一線を担ってまいりました。",
-                      "For approximately 18 years, I was deeply involved in administrative work related to intellectual property rights—patents, utility models, designs, and trademarks—at a patent firm. I was primarily on the front lines of providing accurate progress reports to clients, strict deadline management where no mistakes are permitted, and back-office operations within the patent firm.",
+                      "私はこれまで、特許事務所において約18年間にわたり、特許・実用新案・意匠・商標といった知的財産権に関わる事務業務に深く携わってまいりました。主に、お客様への正確な進捗報告や、ミスが許されない厳格な期限管理など、特許事務所内のバックオフィス業務の第一線を担ってまいりました。",
+                      "For approximately 18 years, I was deeply involved in administrative work related to intellectual property rights—patents, utility models, designs, and trademarks—at a patent firm. I was at the core of the patent firm's back-office operations, mainly handling accurate progress reports for clients and strict deadline management where there was no room for error.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "また、長年におよぶキャリアの中で知財事務部門の管理職（マネジメント職）も経験し、事務フローの構築、所内システム部と連携したミスを防ぐデータベースの整備、スタッフの育成やマニュアル化など、業務効率化とリスクマネジメントを統括してまいりました。",
-                      "Over my long career, I also served as a manager in the IP administration department, overseeing operational efficiency and risk management—including the design of administrative workflows, the development of error-preventing databases in cooperation with the in-house systems team, and staff training and manualization.",
+                      "また、長年におよぶキャリアの中で知財事務部門の管理職（マネジメント職）も経験し、スタッフの採用・育成、事務フローの構築やマニュアル化、所内システム部と連携したミスを防ぐデータベースの整備など、業務効率化とリスクマネジメントを統括してまいりました。",
+                      "Furthermore, in my managerial roles within IP administration, I have overseen overall operational efficiency and risk management. This includes staff recruitment and development, workflow creation and documentation, and collaboration with the internal IT department to maintain databases designed for error prevention.",
                     )}
                   </p>
                   <p>
@@ -73,8 +73,8 @@ export default function About() {
                       <span className="font-semibold">{t("「知財事務マネジメント部」", "“IP Administration Management Division”")}</span>
                       <br />
                       {t(
-                        "少人数の特許事務所様や弁理士の先生方の頼れるパートナーとして、これまでの知財事務経験・管理職経験をフルに活かした知財事務サポート、知財事務業務フローの効率化提案・AI活用コンサルティング等を担っています。",
-                        "As a reliable partner for small patent firms and patent attorneys, we provide IP administrative support, workflow-efficiency proposals, and AI-utilization consulting, fully leveraging our IP administration and management experience.",
+                        "特許事務所様や弁理士の先生方の頼れるパートナーとして、これまでの知財事務経験・管理職経験をフルに活かした知財事務サポート、知財事務業務フローの効率化提案・AI活用コンサルティング等を担っています。",
+                        "As a reliable partner for patent firms and patent attorneys, we provide IP administrative support, workflow-efficiency proposals, and AI-utilization consulting, fully leveraging our IP administration and management experience.",
                       )}
                     </li>
                   </ul>
@@ -172,7 +172,7 @@ export default function About() {
               <ul className="list-disc pl-5 space-y-3 leading-relaxed">
                 <li>
                   {t(
-                    "外国人スタッフが多く在籍する、国際色豊かな大手特許事務所にて約18年間、知財事務の専門職として勤務。日本国内だけでなく、海外のクライアント企業が特許・商標・意匠等の知的財産権を取得・維持するプロセスにおいて、事務フロントとして正確かつ迅速な進捗報告、ミスの許されない期限管理などの第一線に従事。",
+                    "外国人スタッフが多く在籍する国際色豊かな大手特許事務所にて、約18年間、知財事務の専門職として勤務。日本国内だけでなく、海外のクライアント企業が特許・商標・意匠等の知的財産権を取得・維持するプロセスにおいて、事務フロントとして正確かつ迅速な進捗報告、ミスの許されない期限管理などの第一線に従事。",
                     "Served for approximately 18 years as an intellectual property (IP) administrative specialist at a prominent, globally diverse patent firm with a large international staff. Managed front-facing administrative operations to support both domestic and international corporate clients in securing and maintaining patent, trademark, and design rights. Responsibilities included delivering accurate and prompt status reports, and handling high-stakes deadline management where zero errors were permitted.",
                   )}
                 </li>

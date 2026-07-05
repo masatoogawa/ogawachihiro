@@ -82,7 +82,7 @@ export default function IpManagement() {
               </h3>
               <p className="text-sm leading-relaxed text-gray-700">
                 {t(
-                  "当事務所では、弁理士法第75条（非弁理士の業務の禁止）を遵守するため、特許庁への提出書類（国内出願・PCT国際出願・各種手続書等）の作成・代行業務は一切行っておりません。各種手続きに関する情報提供や記載内容のアドバイスを承っております。あらかじめご了承ください。",
+                  "当事務所では、弁理士法第75条（非弁理士の業務の禁止）を遵守するため、特許庁への提出書類（国内出願・PCT国際出願・各種手続書類）の作成・代行業務は一切行っておりません。各種手続きに関する情報提供や記載内容のアドバイスを承っております。あらかじめご了承ください。",
                   "In compliance with Article 75 of the Patent Attorney Act (Prohibition of Services by Non-Patent Attorneys), our office does not engage in the creation or representation of any documents to be submitted to the Japan Patent Office (including domestic applications, PCT international applications, and various procedural forms). Please note that our services are strictly limited to providing informational support and advice regarding content for various procedures. Thank you for your understanding.",
                 )}
               </p>

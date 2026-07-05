@@ -25,8 +25,8 @@ export default function Home() {
           <div>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-sky-600 mb-3 md:mb-4 leading-tight">
               {t(
-                "ビジネスの基盤となる著作権管理や、各種契約書の作成（知財ライセンス・秘密保持等）を中心にサポートする行政書士事務所です。",
-                "We are an Administrative Scrivener (Gyoseishoshi) office specializing in support for business foundations, focusing on copyright management and the drafting of various contracts, including intellectual property (IP) licensing and non-disclosure agreements (NDAs).",
+                "ビジネスの基盤となる著作権管理や、各種契約書の作成を中心にサポートする行政書士事務所です。",
+                "We are an Administrative Scrivener (Gyoseishoshi) office specializing in support for business foundations, focusing on copyright management and the drafting of various contracts.",
               )}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-sky-700 mb-3">
