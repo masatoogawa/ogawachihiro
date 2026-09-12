@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/ip-management',
+        destination: '/',
+        statusCode: 301,
+      },
+    ]
+  },
   async rewrites() {
     return [
       {

@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
+import Footer from "@/components/footer"
 import { LanguageProvider } from "@/contexts/language-context"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -64,6 +65,7 @@ export default function RootLayout({
         <LanguageProvider>
           <Header />
           <main className="container mx-auto p-4">{children}</main>
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
