@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://ogawachihiro-office.com'),
   title: "行政書士小川千尋事務所",
-  description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
+  description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
   openGraph: {
     title: "行政書士小川千尋事務所",
-    description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
+    description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
     url: "https://ogawachihiro-office.com",
     siteName: "行政書士小川千尋事務所",
     images: [
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "行政書士小川千尋事務所",
-    description: "外国人の在留資格申請サポート、法人設立、知的財産権のサポートを行う行政書士事務所です。",
+    description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
     images: ["/logo.png"],
   },
   icons: {
