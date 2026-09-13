@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
 import { MapPin, Mail, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import ParamiraiBanner from "@/components/paramirai-banner"
 
 export default function Home() {
   const { t, language } = useLanguage()
@@ -34,8 +35,8 @@ export default function Home() {
             </p>
             <p className="text-sm sm:text-base text-gray-600 mb-4 md:mb-6">
               {t(
-                "18年の知財事務と管理職経験をベースに、皆様のビジネスと組織を堅実に支えます。",
-                "Backed by 18 years of IP administrative practice and management experience, we provide solid support for your business and organization.",
+                "特許事務所で培った18年の知財事務経験をベースに、著作権・契約・許認可の面から皆様のビジネスを堅実に支えます。",
+                "Backed by 18 years of IP administrative experience at a patent firm, we provide solid support for your business in the areas of copyright, contracts, and licenses/permits.",
               )}
             </p>
 
@@ -55,8 +56,8 @@ export default function Home() {
         </h2>
         <p className="text-sm sm:text-base leading-relaxed">
           {t(
-            "特許事務所で18年間、進捗報告や期限管理等の知財事務業務に携わり、管理職として事務フローの構築や業務効率化を統括してきました。この長年のキャリアで培った「知財事務業務への深い理解」と「組織の事務リスクをコントロールするマネジメント力」を活かし、経営者の皆様のビジネス基盤を強固にバックアップいたします。",
-            "With 18 years of experience at a patent firm, I have been deeply involved in IP administration—including progress reporting and strict deadline management—while overseeing workflow design and operational efficiency in a managerial role. Leveraging my deep understanding of IP administrative operations and proven risk-management skills, I am dedicated to providing robust legal support to strengthen your business foundation.",
+            "特許事務所で18年間、知財事務の第一線に携わってまいりました。この長年のキャリアで培った「知財事務業務への深い理解」と「ミスの許されない環境で磨いた正確な事務処理」を活かし、著作権をはじめとする各種契約実務や許認可申請の面から、経営者の皆様のビジネス基盤を強固にバックアップいたします。",
+            "For 18 years, I worked on the front lines of IP administration at a patent firm. Leveraging the deep understanding of IP administrative operations and the precise, error-free administrative skills honed in that demanding environment over my long career, I provide robust support for your business foundation through contract work—including copyright agreements—and license/permit applications.",
           )}
         </p>
       </div>
@@ -66,65 +67,52 @@ export default function Home() {
         <h2 className="text-lg sm:text-xl font-semibold mb-4 text-sky-700">
           {t("主な取扱業務", "Main Services")}
         </h2>
-        <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+        <div className="grid sm:grid-cols-3 gap-4 md:gap-6">
           <div className="bg-sky-50 p-4 rounded-lg">
-            <h3 className="font-semibold mb-3 text-sky-700">
-              <Link href="/administrative-services" className="hover:underline">
-                {t("行政書士実務部", "Administrative Scrivener Practice Division")}
-              </Link>
+            <h3 className="font-semibold mb-2 text-sky-700">
+              {t("著作権ライセンス・各種契約書作成", "Copyright licensing and drafting of various contracts")}
             </h3>
-            <ul className="space-y-2 list-disc pl-5 text-sm sm:text-base">
-              <li>{t("著作権ライセンス・各種契約書作成", "Copyright licensing and drafting of various contracts")}</li>
-              <li>{t("許認可申請・法人設立", "License/permit applications and company incorporation")}</li>
-              <li>
-                {t(
-                  "農業知財（種苗法品種登録・GI地理的表示）の権利保護",
-                  "Protection of agricultural IP (plant variety registration and GI geographical indications)",
-                )}
-              </li>
-            </ul>
-            <Link
-              href="/administrative-services"
-              className="inline-block mt-3 text-sm text-sky-600 hover:underline"
-            >
-              {t("詳しく見る →", "Learn more →")}
-            </Link>
+            <p className="text-sm sm:text-base leading-relaxed">
+              {t(
+                "業務委託契約書、秘密保持契約（NDA）、ライセンス契約など各種契約書の作成・チェック、文化庁への著作権登録",
+                "Drafting and reviewing service agreements, NDAs, licensing agreements and other contracts, and copyright registration with the Agency for Cultural Affairs",
+              )}
+            </p>
           </div>
           <div className="bg-sky-50 p-4 rounded-lg">
-            <h3 className="font-semibold mb-3 text-sky-700">
-              <Link href="/ip-management" className="hover:underline">
-                {t("知財事務マネジメント部", "IP Administration Management Division")}
-              </Link>
+            <h3 className="font-semibold mb-2 text-sky-700">
+              {t("許認可申請・法人設立", "License/permit applications and company incorporation")}
             </h3>
-            <ul className="space-y-2 list-disc pl-5 text-sm sm:text-base">
-              <li>
-                {t(
-                  "特許事務所様向け知財事務サポート（期限管理・進捗報告等）",
-                  "IP administrative support for patent firms (deadline management, preparing reports, etc.)",
-                )}
-              </li>
-              <li>
-                {t(
-                  "知財事務業務のフロー効率化・改善（マニュアル化・AI活用）",
-                  "Workflow efficiency and improvement for IP administration (manualization, AI utilization)",
-                )}
-              </li>
-              <li>
-                {t(
-                  "弁理士と連携した各種補助金申請",
-                  "Various subsidy applications in cooperation with patent attorneys",
-                )}
-              </li>
-            </ul>
-            <Link
-              href="/ip-management"
-              className="inline-block mt-3 text-sm text-sky-600 hover:underline"
-            >
-              {t("詳しく見る →", "Learn more →")}
-            </Link>
+            <p className="text-sm sm:text-base leading-relaxed">
+              {t(
+                "新事業を始めるための各種許認可申請、株式会社・合同会社等の設立手続き",
+                "Various license/permit applications for starting a new business, and incorporation of stock companies, LLCs, etc.",
+              )}
+            </p>
+          </div>
+          <div className="bg-sky-50 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2 text-sky-700">
+              {t(
+                "農業知財（種苗法品種登録・GI地理的表示）の権利保護",
+                "Protection of agricultural IP (plant variety registration and GI geographical indications)",
+              )}
+            </h3>
+            <p className="text-sm sm:text-base leading-relaxed">
+              {t(
+                "農産物のブランドを守る「種苗法に基づく品種登録出願」や「地理的表示（GI）保護制度」の申請支援",
+                "Support for plant variety registration applications and GI protection applications that safeguard agricultural product brands",
+              )}
+            </p>
           </div>
         </div>
+        <div className="text-right mt-3">
+          <Link href="/administrative-services" className="text-sm text-sky-600 hover:underline">
+            {t("取扱業務・費用目安を詳しく見る →", "See services and fee guide →")}
+          </Link>
+        </div>
       </div>
+
+      <ParamiraiBanner className="mb-8" />
 
       <div className="bg-white bg-opacity-90 p-4 sm:p-6 rounded-lg shadow-md">
         <h2 className="text-lg sm:text-xl font-semibold mb-3 md:mb-4 text-sky-700">

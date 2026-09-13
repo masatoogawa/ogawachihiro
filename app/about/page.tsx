@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
+import ParamiraiBanner from "@/components/paramirai-banner"
 
 export default function About() {
   const { t } = useLanguage()
@@ -56,42 +57,31 @@ export default function About() {
                   </p>
                   <p>
                     {t(
-                      "現在、当事務所ではこの経験を活かし、以下の二つの軸を中心に堅実なサポートを展開しております。",
-                      "Today, drawing on this experience, our office provides solid support centered on the following two pillars:",
-                    )}
-                  </p>
-                  <ul className="list-disc pl-5 space-y-3">
-                    <li>
-                      <span className="font-semibold">{t("「行政書士実務部」", "“Administrative Scrivener Practice Division”")}</span>
-                      <br />
-                      {t(
-                        "経営者様が直面しやすい「ホームページ・デザイン・記事などの著作権トラブル」を防ぐための著作権契約書をはじめとする各種契約書作成、新事業をスムーズにスタートするための許認可申請・法人設立、建造・開発された農産物の価値を守る農業知財（種苗法品種登録・GI申請）の保護支援を手掛けています。",
-                        "We handle the drafting of copyright agreements and other contracts to prevent the copyright troubles business owners often face (over websites, designs, articles, etc.), license/permit applications and company incorporation for smoothly launching new businesses, and support for protecting agricultural IP (plant variety registration and GI applications) that safeguards the value of cultivated and developed agricultural products.",
-                      )}
-                    </li>
-                    <li>
-                      <span className="font-semibold">{t("「知財事務マネジメント部」", "“IP Administration Management Division”")}</span>
-                      <br />
-                      {t(
-                        "特許事務所様や弁理士の先生方の頼れるパートナーとして、これまでの知財事務経験・管理職経験をフルに活かした知財事務サポート、知財事務業務フローの効率化提案・AI活用コンサルティング等を担っています。",
-                        "As a reliable partner for patent firms and patent attorneys, we provide IP administrative support, workflow-efficiency proposals, and AI-utilization consulting, fully leveraging our IP administration and management experience.",
-                      )}
-                    </li>
-                  </ul>
-                  <p>
-                    {t(
-                      "ミスが許されない環境で長年培った確実な事務経験を活かし、弁理士の先生方との連携も大切にしながら、皆様のビジネスを守る確実な契約・事務体制を強固に支える存在でありたいと願っています。",
-                      "Leveraging my extensive experience in high-stakes environments where precision is non-negotiable, I am dedicated to providing robust support for your contracts and administrative structures. Working in close collaboration with patent attorneys, my goal is to safeguard your business operations.",
+                      "現在、当事務所ではこの経験を活かし、経営者様が直面しやすい「ホームページ・デザイン・記事などの著作権トラブル」を防ぐための著作権契約書をはじめとする各種契約書作成、新事業をスムーズにスタートするための許認可申請・法人設立、育成・開発された農産物の価値を守る農業知財（種苗法品種登録・GI申請）の保護支援を手掛けております。",
+                      "Today, drawing on this experience, our office handles the drafting of copyright agreements and other contracts to prevent the copyright troubles business owners often face (over websites, designs, articles, etc.), license/permit applications and company incorporation for smoothly launching new businesses, and support for protecting agricultural IP (plant variety registration and GI applications) that safeguards the value of cultivated and developed agricultural products.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "「著作権の契約書をチェックしてほしい」「新しい事業の許可について聞きたい」「特許事務所のバックオフィス体制を効率化したい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
-                      "Please feel free to reach out to me for any assistance, such as: reviewing copyright agreements, consulting on business licensing and permits, or streamlining back-office operations for patent firms.",
+                      "なお、特許事務所様・弁理士の先生方に向けた知財事務サポートおよび事務フローのDX支援につきましては、別屋号「オフィス パラミライ」として事業を分け、専門のサービスとして運営しております。詳しくは同サイト（https://paramirai.com）をご覧ください。",
+                      "IP administrative support and administrative-workflow DX support for patent firms and patent attorneys are operated as a separate, dedicated service under the trade name “Office Paramirai.” For details, please visit its website (https://paramirai.com).",
+                    )}
+                  </p>
+                  <p>
+                    {t(
+                      "ミスが許されない環境で長年培った確実な事務経験を活かし、弁理士の先生方との連携も大切にしながら、皆様のビジネスを守る確実な契約体制を強固に支える存在でありたいと願っています。",
+                      "Leveraging my extensive experience in high-stakes environments where precision is non-negotiable, I am dedicated to providing robust support for the contracts that protect your business. Working in close collaboration with patent attorneys, my goal is to safeguard your business operations.",
+                    )}
+                  </p>
+                  <p>
+                    {t(
+                      "「著作権の契約書をチェックしてほしい」「新しい事業の許可について聞きたい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
+                      "Please feel free to reach out to me for any assistance, such as reviewing copyright agreements or consulting on business licensing and permits.",
                     )}
                   </p>
                 </div>
               </div>
+              <ParamiraiBanner className="mt-6" />
             </div>
           </section>
 

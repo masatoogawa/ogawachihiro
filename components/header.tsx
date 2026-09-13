@@ -18,8 +18,7 @@ export default function Header() {
   const menuItems = [
     { href: "/", label: t("TOP", "HOME") },
     { href: "/about", label: t("事務所概要", "About Us") },
-    { href: "/administrative-services", label: t("行政書士実務部", "Administrative Scrivener Practice") },
-    { href: "/ip-management", label: t("知財事務マネジメント部", "IP Administration Management") },
+    { href: "/administrative-services", label: t("取扱業務", "Services") },
     { href: "/contact", label: t("お問い合わせ", "Contact") },
     { href: "/blog", label: t("ブログ", "Blog") },
   ]

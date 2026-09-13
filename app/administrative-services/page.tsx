@@ -11,7 +11,7 @@ export default function AdministrativeServices() {
     <div className="max-w-4xl mx-auto">
       <div className="bg-white bg-opacity-90 p-6 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-6 text-sky-600 border-b pb-2">
-          {t("行政書士実務部", "Administrative Scrivener Practice Division")}
+          {t("取扱業務", "Services")}
         </h1>
 
         <div className="space-y-8">

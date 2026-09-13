@@ -3,7 +3,7 @@
 User-agent: *
 Allow: /
 Allow: /about
-Allow: /fees
+Allow: /administrative-services
 Allow: /contact
 Allow: /blog
 

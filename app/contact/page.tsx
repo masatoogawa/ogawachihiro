@@ -70,11 +70,26 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
-            <p className="mb-6">
+            <p className="mb-3">
               {t(
                 "無料相談（初回１時間）のご予約やお問い合わせは、こちらで受け付けております。",
                 "We accept reservations for free consultations (first hour) and inquiries here.",
               )}
+            </p>
+            <p className="mb-6 text-sm text-gray-600">
+              {t(
+                "特許事務所様の事務フロー改善・DX支援のご相談は、",
+                "For consultations on administrative-workflow improvement and DX support for patent firms, please contact ",
+              )}
+              <a
+                href="https://paramirai.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-600 hover:underline"
+              >
+                {t("オフィス パラミライ", "Office Paramirai")}
+              </a>
+              {t("へお願いいたします。", ".")}
             </p>
 
             <div className="bg-white p-4 rounded-lg shadow-sm mb-6">

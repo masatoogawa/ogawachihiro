@@ -29,7 +29,7 @@ export default async function Image() {
         }}
       >
         <div style={{ fontSize: 64, marginBottom: 24 }}>行政書士小川千尋事務所</div>
-        <div style={{ fontSize: 32 }}>外国人の在留資格申請サポート</div>
+        <div style={{ fontSize: 32 }}>著作権・契約書・許認可申請のサポート</div>
       </div>
     ),
     // ImageResponse options
