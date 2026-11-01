@@ -18,7 +18,7 @@ const strengths = [
   },
   {
     titleJa: "電子申請の準備からお手伝い",
-    titleEn: "Help from preparing for electronic filing",
+    titleEn: "Support with electronic filing, from setup to reporting",
     bodyJa:
       "補助金の多くは、GビズIDとJグランツによる電子申請です。アカウントの取得から申請後の報告まで、流れに沿ってご案内します。",
     bodyEn:

@@ -139,7 +139,7 @@ export default function SubsidyFlow() {
             <ul className="space-y-3">
               {PREPARATIONS.map((item) => (
                 <li key={item.titleJa} className="leading-relaxed">
-                  <span className="font-semibold">・{t(item.titleJa, item.titleEn)}：</span>
+                  <span className="font-semibold">・{t(item.titleJa, item.titleEn)}{t("：", ": ")}</span>
                   {t(item.bodyJa, item.bodyEn)}
                 </li>
               ))}
