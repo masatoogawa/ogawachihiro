@@ -10,11 +10,11 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ogawachihiro-office.com'),
-  title: "行政書士小川千尋事務所",
-  description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
+  title: "行政書士小川千尋事務所｜補助金・助成金の申請（東京・渋谷）",
+  description: "特許事務所で18年、期限と書類に向き合ってきた行政書士です。補助金・助成金の申請、著作権・契約書、許認可・会社設立の手続きをお手伝いします。",
   openGraph: {
-    title: "行政書士小川千尋事務所",
-    description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
+    title: "行政書士小川千尋事務所｜補助金・助成金の申請（東京・渋谷）",
+    description: "特許事務所で18年、期限と書類に向き合ってきた行政書士です。補助金・助成金の申請、著作権・契約書、許認可・会社設立の手続きをお手伝いします。",
     url: "https://ogawachihiro-office.com",
     siteName: "行政書士小川千尋事務所",
     images: [
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "行政書士小川千尋事務所",
-    description: "著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。",
+    title: "行政書士小川千尋事務所｜補助金・助成金の申請（東京・渋谷）",
+    description: "特許事務所で18年、期限と書類に向き合ってきた行政書士です。補助金・助成金の申請、著作権・契約書、許認可・会社設立の手続きをお手伝いします。",
     images: ["/logo.png"],
   },
   icons: {

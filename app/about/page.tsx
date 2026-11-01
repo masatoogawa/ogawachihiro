@@ -57,26 +57,26 @@ export default function About() {
                   </p>
                   <p>
                     {t(
-                      "現在、当事務所ではこの経験を活かし、経営者様が直面しやすい「ホームページ・デザイン・記事などの著作権トラブル」を防ぐための著作権契約書をはじめとする各種契約書作成、新事業をスムーズにスタートするための許認可申請・法人設立、育成・開発された農産物の価値を守る農業知財（種苗法品種登録・GI申請）の保護支援を手掛けております。",
-                      "Today, drawing on this experience, our office handles the drafting of copyright agreements and other contracts to prevent the copyright troubles business owners often face (over websites, designs, articles, etc.), license/permit applications and company incorporation for smoothly launching new businesses, and support for protecting agricultural IP (plant variety registration and GI applications) that safeguards the value of cultivated and developed agricultural products.",
+                      "現在、当事務所ではこの経験を活かし、補助金・助成金の申請を中心に、著作権・契約書の作成、許認可申請・法人設立、農産物のブランド保護（品種登録・GI申請）をお手伝いしています。補助金の申請は、締切までに必要な書類をそろえ、決まりにそって正確に提出する仕事です。特許事務で身につけたことが、そのまま生きています。",
+                      "Today, drawing on this experience, our office focuses on subsidy and grant applications, and also helps with copyright and contract drafting, license/permit applications and company incorporation, and brand protection for agricultural products (plant variety registration and GI applications). Applying for a subsidy means gathering the necessary documents by the deadline and submitting them accurately in line with the rules. What I learned in patent administration carries over directly.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "なお、特許事務所様・弁理士の先生方に向けた知財事務サポートおよび事務フローのDX支援につきましては、別屋号「オフィス パラミライ」として事業を分け、専門のサービスとして運営しております。詳しくは同サイト（https://paramirai.com）をご覧ください。",
-                      "IP administrative support and administrative-workflow DX support for patent firms and patent attorneys are operated as a separate, dedicated service under the trade name “Office Paramirai.” For details, please visit its website (https://paramirai.com).",
+                      "なお、特許事務所の事務の仕組みづくり（ペーパーレス化・リモートワーク・AIの活用など）は、別屋号「オフィス パラミライ」としてお引き受けしています。詳しくは同サイト（https://paramirai.com）をご覧ください。",
+                      "Support for building administrative systems at patent firms (going paperless, remote work, use of AI, etc.) is provided under our separate trade name, “Office Paramirai.” For details, please visit its website (https://paramirai.com).",
                     )}
                   </p>
                   <p>
                     {t(
-                      "ミスが許されない環境で長年培った確実な事務経験を活かし、弁理士の先生方との連携も大切にしながら、皆様のビジネスを守る確実な契約体制を強固に支える存在でありたいと願っています。",
-                      "Leveraging my extensive experience in high-stakes environments where precision is non-negotiable, I am dedicated to providing robust support for the contracts that protect your business. Working in close collaboration with patent attorneys, my goal is to safeguard your business operations.",
+                      "特許の出願は弁理士の先生のご専門ですが、その周りにある補助金や契約、許認可などの手続きは、行政書士としてお手伝いできます。弁理士の先生方との連携も大切にしながら、経営者の皆様が本業に集中できるよう、手続きを確実に進めます。",
+                      "Patent filings are the domain of patent attorneys, but as an administrative scrivener I can help with the procedures surrounding them, such as subsidies, contracts, and licenses/permits. Valuing collaboration with patent attorneys, I move procedures forward reliably so that business owners can focus on their core business.",
                     )}
                   </p>
                   <p>
                     {t(
-                      "「著作権の契約書をチェックしてほしい」「新しい事業の許可について聞きたい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
-                      "Please feel free to reach out to me for any assistance, such as reviewing copyright agreements or consulting on business licensing and permits.",
+                      "「この補助金を申請したい」「契約書をチェックしてほしい」など、どんなことでも結構です。どうぞお気軽にご相談ください。",
+                      "Whether it's “I want to apply for this subsidy” or “I'd like my contract checked,” anything is fine. Please feel free to consult me.",
                     )}
                   </p>
                 </div>
@@ -126,6 +126,12 @@ export default function About() {
                       {t(
                         "不当要求防止責任者講習修了者",
                         "Certified Manager for Prevention of Unjust Demands",
+                      )}
+                    </li>
+                    <li>
+                      {t(
+                        "監理責任者等講習修了者",
+                        "Completed the Supervision Manager Training Course",
                       )}
                     </li>
                   </ul>

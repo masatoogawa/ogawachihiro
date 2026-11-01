@@ -15,13 +15,13 @@ export function middleware(request: NextRequest) {
     response.headers.set("x-og-title", "Chihiro Ogawa Administrative Scrivener Office")
     response.headers.set(
       "x-og-description",
-      "An administrative scrivener office supporting copyright and contract drafting, license/permit applications and company incorporation, and protection of agricultural IP.",
+      "An administrative scrivener with 18 years of experience handling deadlines and documents at a patent firm. We help with subsidy and grant applications, copyright and contracts, and licenses/permits and company incorporation.",
     )
   } else {
-    response.headers.set("x-og-title", encodeURIComponent("行政書士小川千尋事務所"))
+    response.headers.set("x-og-title", encodeURIComponent("行政書士小川千尋事務所｜補助金・助成金の申請（東京・渋谷）"))
     response.headers.set(
       "x-og-description",
-      encodeURIComponent("著作権・各種契約書の作成、許認可申請・法人設立、農業知財の権利保護をサポートする行政書士事務所です。"),
+      encodeURIComponent("特許事務所で18年、期限と書類に向き合ってきた行政書士です。補助金・助成金の申請、著作権・契約書、許認可・会社設立の手続きをお手伝いします。"),
     )
   }
 

@@ -7,13 +7,16 @@ const nextConfig = {
         destination: '/',
         statusCode: 301,
       },
-    ]
-  },
-  async rewrites() {
-    return [
+      // ブログ廃止（2026-11）：/blog と各記事は TOP へ転送
       {
-        source: '/content/blog/:path*',
-        destination: '/api/static/blog/:path*',
+        source: '/blog',
+        destination: '/',
+        statusCode: 301,
+      },
+      {
+        source: '/blog/:path*',
+        destination: '/',
+        statusCode: 301,
       },
     ]
   },

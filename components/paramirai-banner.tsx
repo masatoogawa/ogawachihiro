@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 const PARAMIRAI_URL = "https://paramirai.com"
 
 /**
- * 弁理士の先生方向けの案内帯。
+ * 【弁理士の先生方へ】の案内帯（TOP・事務所概要で共通）。
  * 行政書士事務所本体のサービスと同格に見えないよう、控えめなトーンで表示する。
  */
 export default function ParamiraiBanner({ className }: { className?: string }) {
@@ -23,10 +23,16 @@ export default function ParamiraiBanner({ className }: { className?: string }) {
       <p className="font-semibold text-slate-800 mb-1">
         {t("【弁理士の先生方へ】", "[For Patent Attorneys]")}
       </p>
+      <p className="leading-relaxed mb-2">
+        {t(
+          "お客様から補助金・助成金のご相談を受けたときは、申請書類の作成と取りまとめをお引き受けします。出願は先生に、助成金の書類は私に、という形で、先生のお仕事と並行して進めます。申請書のうち、技術的・専門的な内容は先生にご相談させてください。必要な書類は基本的にお客様にご用意いただきますが、出願関係の資料などは先生にご協力をお願いすることがあります。",
+          "When your clients consult you about subsidies or grants, I can take on the preparation and coordination of the application documents. The filing stays with you and the grant paperwork with me, so the work proceeds in parallel with yours. I will consult you on the technical and specialized parts of the application. Clients basically prepare the necessary documents themselves, but I may ask for your cooperation with filing-related materials.",
+        )}
+      </p>
       <p className="leading-relaxed">
         {t(
-          "特許事務所様の知財事務フロー改善・DX推進につきましては、知財DX専門サービス「オフィス パラミライ」にてサポートしております。",
-          "IP administration workflow improvement and DX support for patent firms are provided by our dedicated IP DX service, “Office Paramirai.”",
+          "特許事務所の事務の仕組みづくり（ペーパーレス化・リモートワーク・AIの活用など）は、別屋号「オフィス パラミライ」でお手伝いしています。",
+          "Support for building administrative systems at patent firms (going paperless, remote work, use of AI, etc.) is provided under our separate trade name, “Office Paramirai.”",
         )}
       </p>
       <a

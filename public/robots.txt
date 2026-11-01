@@ -4,8 +4,8 @@ User-agent: *
 Allow: /
 Allow: /about
 Allow: /administrative-services
+Allow: /subsidy-flow
 Allow: /contact
-Allow: /blog
 
 # Disallow specific paths if needed
 # Disallow: /admin
