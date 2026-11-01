@@ -98,19 +98,19 @@ export default function AdministrativeServices() {
                     <td className="py-2 px-4 border">
                       {t("補助金・助成金の申請サポート", "Subsidy and grant application support")}
                     </td>
-                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("30,000円〜", "¥30,000〜")}</td>
+                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("30,000円〜", "From ¥30,000")}</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4 border">
                       {t("著作権契約書・各種契約書の作成・チェック", "Drafting/checking copyright and other contracts")}
                     </td>
-                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("30,000円〜", "¥30,000〜")}</td>
+                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("30,000円〜", "From ¥30,000")}</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4 border">
                       {t("文化庁への著作権登録申請手続き", "Copyright registration with the Agency for Cultural Affairs")}
                     </td>
-                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("80,000円〜", "¥80,000〜")}</td>
+                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("80,000円〜", "From ¥80,000")}</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4 border">
@@ -119,7 +119,7 @@ export default function AdministrativeServices() {
                         "License/permit applications and company incorporation (stock companies, LLCs, etc.)",
                       )}
                     </td>
-                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("120,000円〜", "¥120,000〜")}</td>
+                    <td className="py-2 px-4 border text-right whitespace-nowrap">{t("120,000円〜", "From ¥120,000")}</td>
                   </tr>
                   <tr>
                     <td className="py-2 px-4 border">

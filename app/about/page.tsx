@@ -63,12 +63,6 @@ export default function About() {
                   </p>
                   <p>
                     {t(
-                      "なお、特許事務所の事務の仕組みづくり（ペーパーレス化・リモートワーク・AIの活用など）は、別屋号「オフィス パラミライ」としてお引き受けしています。詳しくは同サイト（https://paramirai.com）をご覧ください。",
-                      "Support for building administrative systems at patent firms (going paperless, remote work, use of AI, etc.) is provided under our separate trade name, “Office Paramirai.” For details, please visit its website (https://paramirai.com).",
-                    )}
-                  </p>
-                  <p>
-                    {t(
                       "特許の出願は弁理士の先生のご専門ですが、その周りにある補助金や契約、許認可などの手続きは、行政書士としてお手伝いできます。弁理士の先生方との連携も大切にしながら、経営者の皆様が本業に集中できるよう、手続きを確実に進めます。",
                       "Patent filings are the domain of patent attorneys, but as an administrative scrivener I can help with the procedures surrounding them, such as subsidies, contracts, and licenses/permits. Valuing collaboration with patent attorneys, I move procedures forward reliably so that business owners can focus on their core business.",
                     )}
@@ -109,7 +103,10 @@ export default function About() {
                         "Certified Administrative Procedures Legal Specialist authorized to represent clients in administrative appeals",
                       )}
                     </li>
-                    <li>{t("申請取次行政書士", "Immigration Lawyer")}</li>
+                    <li>{t(
+                        "申請取次行政書士",
+                        "Certified Immigration Application Agent (Shinsei Toritsugi Gyoseishoshi)",
+                      )}</li>
                     <li>
                       {t(
                         "日本行政書士会連合会著作権相談員",
