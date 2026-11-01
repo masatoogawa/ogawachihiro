@@ -18,9 +18,9 @@ export default function Header() {
   const menuItems = [
     { href: "/", label: t("TOP", "HOME") },
     { href: "/about", label: t("事務所概要", "About Us") },
-    { href: "/administrative-services", label: t("取扱業務", "Services") },
+    { href: "/administrative-services", label: t("取扱業務・費用", "Services & Fees") },
+    { href: "/subsidy-flow", label: t("補助金申請の流れ", "Subsidy Application Process") },
     { href: "/contact", label: t("お問い合わせ", "Contact") },
-    { href: "/blog", label: t("ブログ", "Blog") },
   ]
 
   return (
@@ -70,11 +70,11 @@ export default function Header() {
           </Link>
 
           {/* デスクトップメニュー */}
-          <nav className="hidden md:block">
+          <nav className="hidden lg:block">
             <ul className="flex gap-6">
               {menuItems.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-sky-600 font-medium">
+                  <Link href={item.href} className="hover:text-sky-600 font-medium whitespace-nowrap">
                     {item.label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export default function Header() {
 
           {/* ハンバーガーメニューボタン */}
           <button
-            className="md:hidden text-sky-600"
+            className="lg:hidden text-sky-600"
             onClick={toggleMenu}
             aria-label={t("メニューを開く", "Open menu")}
           >
@@ -95,7 +95,7 @@ export default function Header() {
 
       {/* モバイルメニュー（半透明背景） */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 md:hidden flex flex-col">
+        <div className="fixed inset-0 z-50 lg:hidden flex flex-col">
           {/* 半透明の背景オーバーレイ */}
           <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm" onClick={toggleMenu}></div>
 

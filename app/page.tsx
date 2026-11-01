@@ -3,9 +3,36 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
-import { MapPin, Mail, Globe } from "lucide-react"
+import { MapPin, Globe, Linkedin, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ParamiraiBanner from "@/components/paramirai-banner"
+
+const strengths = [
+  {
+    titleJa: "期限と書類に強い",
+    titleEn: "Strong with deadlines and documents",
+    bodyJa:
+      "特許事務所で18年、期限管理や書類の取りまとめを担ってきました。締切のある補助金の申請も、準備の段取りから一緒に進めます。",
+    bodyEn:
+      "For 18 years at a patent firm, I was responsible for deadline management and compiling documents. For subsidy applications with deadlines, too, we work together from planning the preparation onward.",
+  },
+  {
+    titleJa: "電子申請の準備からお手伝い",
+    titleEn: "Help from preparing for electronic filing",
+    bodyJa:
+      "補助金の多くは、GビズIDとJグランツによる電子申請です。アカウントの取得から申請後の報告まで、流れに沿ってご案内します。",
+    bodyEn:
+      "Most subsidies are applied for electronically via gBizID and jGrants. We guide you step by step, from obtaining an account to reporting after the application.",
+  },
+  {
+    titleJa: "弁理士の先生との連携",
+    titleEn: "Collaboration with patent attorneys",
+    bodyJa:
+      "外国出願の助成金など、出願と一緒に進める申請もお引き受けします。特許や商標の出願は弁理士の先生のご専門ですが、助成金の書類は私が行政書士としてお手伝いします。弁理士の先生のご紹介もできます。",
+    bodyEn:
+      "We also handle applications that proceed alongside a filing, such as grants for foreign filings. Patent and trademark filings are the domain of patent attorneys, but as an administrative scrivener I help with the grant paperwork. I can also introduce you to a patent attorney.",
+  },
+]
 
 export default function Home() {
   const { t, language } = useLanguage()
@@ -26,8 +53,8 @@ export default function Home() {
           <div>
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-sky-600 mb-3 md:mb-4 leading-tight">
               {t(
-                "ビジネスの基盤となる著作権管理や、各種契約書の作成を中心にサポートする行政書士事務所です。",
-                "We are an Administrative Scrivener (Gyoseishoshi) office specializing in support for business foundations, focusing on copyright management and the drafting of various contracts.",
+                "補助金・助成金の申請を中心に、経営者の皆様の手続きをお手伝いする行政書士事務所です。",
+                "We are an Administrative Scrivener (Gyoseishoshi) office that helps business owners with their procedures, focusing on subsidy and grant applications.",
               )}
             </h1>
             <p className="text-base sm:text-lg md:text-xl text-sky-700 mb-3">
@@ -35,8 +62,8 @@ export default function Home() {
             </p>
             <p className="text-sm sm:text-base text-gray-600 mb-4 md:mb-6">
               {t(
-                "特許事務所で培った18年の知財事務経験をベースに、著作権・契約・許認可の面から皆様のビジネスを堅実に支えます。",
-                "Backed by 18 years of IP administrative experience at a patent firm, we provide solid support for your business in the areas of copyright, contracts, and licenses/permits.",
+                "特許事務所で18年、期限と書類に向き合ってきた経験をもとに、補助金の申請書づくりから、著作権・契約、許認可まで、皆様の手続きを確実に進めます。",
+                "Drawing on 18 years of handling deadlines and documents at a patent firm, we move your procedures forward reliably—from preparing subsidy applications to copyright, contracts, and licenses/permits.",
               )}
             </p>
 
@@ -54,12 +81,14 @@ export default function Home() {
         <h2 className="text-lg sm:text-xl font-semibold mb-3 md:mb-4 text-sky-700">
           {t("当所の強み", "Our Strengths")}
         </h2>
-        <p className="text-sm sm:text-base leading-relaxed">
-          {t(
-            "特許事務所で18年間、知財事務の第一線に携わってまいりました。この長年のキャリアで培った「知財事務業務への深い理解」と「ミスの許されない環境で磨いた正確な事務処理」を活かし、著作権をはじめとする各種契約実務や許認可申請の面から、経営者の皆様のビジネス基盤を強固にバックアップいたします。",
-            "For 18 years, I worked on the front lines of IP administration at a patent firm. Leveraging the deep understanding of IP administrative operations and the precise, error-free administrative skills honed in that demanding environment over my long career, I provide robust support for your business foundation through contract work—including copyright agreements—and license/permit applications.",
-          )}
-        </p>
+        <ul className="space-y-4">
+          {strengths.map((item) => (
+            <li key={item.titleJa} className="bg-sky-50 p-4 rounded-lg">
+              <h3 className="font-semibold mb-1 text-sky-700">{t(item.titleJa, item.titleEn)}</h3>
+              <p className="text-sm sm:text-base leading-relaxed">{t(item.bodyJa, item.bodyEn)}</p>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* 主な取扱業務 */}
@@ -67,10 +96,26 @@ export default function Home() {
         <h2 className="text-lg sm:text-xl font-semibold mb-4 text-sky-700">
           {t("主な取扱業務", "Main Services")}
         </h2>
-        <div className="grid sm:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
           <div className="bg-sky-50 p-4 rounded-lg">
             <h3 className="font-semibold mb-2 text-sky-700">
-              {t("著作権ライセンス・各種契約書作成", "Copyright licensing and drafting of various contracts")}
+              {t("補助金・助成金の申請", "Subsidy and grant applications")}
+            </h3>
+            <p className="text-sm sm:text-base leading-relaxed">
+              {t(
+                "東京都の外国出願の助成金、デジタル化の補助金など。申請できる制度の確認から、書類の作成、電子申請、採択後の報告までお手伝いします。",
+                "Such as the Tokyo Metropolitan Government's grant for foreign patent/trademark filings and subsidies for digitalization. We help from checking which programs you are eligible for, through preparing documents and electronic filing, to reporting after approval.",
+              )}
+            </p>
+            <div className="mt-2">
+              <Link href="/subsidy-flow" className="text-sm text-sky-600 hover:underline">
+                {t("申請の流れを見る →", "See the application process →")}
+              </Link>
+            </div>
+          </div>
+          <div className="bg-sky-50 p-4 rounded-lg">
+            <h3 className="font-semibold mb-2 text-sky-700">
+              {t("著作権・各種契約書の作成", "Copyright and drafting of various contracts")}
             </h3>
             <p className="text-sm sm:text-base leading-relaxed">
               {t(
@@ -93,8 +138,8 @@ export default function Home() {
           <div className="bg-sky-50 p-4 rounded-lg">
             <h3 className="font-semibold mb-2 text-sky-700">
               {t(
-                "農業知財（種苗法品種登録・GI地理的表示）の権利保護",
-                "Protection of agricultural IP (plant variety registration and GI geographical indications)",
+                "農産物のブランド保護（品種登録・GI）",
+                "Brand protection for agricultural products (plant variety registration and GI)",
               )}
             </h3>
             <p className="text-sm sm:text-base leading-relaxed">
@@ -129,16 +174,10 @@ export default function Home() {
                 )}
               </span>
             </p>
-            <p className="flex items-center gap-2 mb-3">
+            <p className="flex items-center gap-2 mb-4 md:mb-6">
               <Globe className="text-sky-600 shrink-0" />
               <a href="https://ogawachihiro-office.com" className="text-sky-600 hover:underline break-all">
                 https://ogawachihiro-office.com
-              </a>
-            </p>
-            <p className="flex items-center gap-2 mb-4 md:mb-6">
-              <Mail className="text-sky-600 shrink-0" />
-              <a href="mailto:info@ogawachihiro-office.com" className="text-sky-600 hover:underline break-all">
-                info@ogawachihiro-office.com
               </a>
             </p>
           </div>
@@ -159,6 +198,17 @@ export default function Home() {
                 {t("LINEでもお気軽にお問い合わせください。", "Feel free to contact us via LINE as well.")}
               </p>
             </div>
+            <a
+              href="https://www.linkedin.com/in/chihiro-ogawa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 flex items-center justify-center gap-2 text-sm text-sky-700 hover:underline"
+            >
+              <Linkedin size={18} aria-hidden="true" />
+              {t("LinkedIn（発信しています）", "LinkedIn (I post updates here)")}
+              <ExternalLink size={14} aria-hidden="true" />
+              <span className="sr-only">{t("（別ウィンドウで開く）", "(opens in a new window)")}</span>
+            </a>
           </div>
         </div>
 

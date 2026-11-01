@@ -4,29 +4,44 @@ import { Resend } from 'resend';
 // Resendインスタンスを初期化（環境変数からAPIキーを取得）
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// HTML メール本文に埋め込む値のエスケープ
+function escapeHtml(value: string): string {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, subject, message } = body;
+    const { name, email, phone, category, subject, referrer, message } = body;
 
-    console.log('送信開始:', { name, email, subject }); // デバッグログを追加
+    console.log('送信開始:', { name, email, category, subject }); // デバッグログを追加
+
+    const categoryText = category || '未選択';
+    const referrerText = referrer || 'なし';
 
     // Resendを使ってメールを送信
     const { data, error } = await resend.emails.send({
       from: 'お問い合わせフォーム <info@ogawachihiro-office.com>',
       to: 'info@ogawachihiro-office.com', // 送信先
-      subject: `[お問い合わせ] ${subject}`,
-      text: `名前: ${name}\nメールアドレス: ${email}\n電話番号: ${phone || 'なし'}\n\n${message}`,
+      subject: `[お問い合わせ][${categoryText}] ${subject}`,
+      text: `名前: ${name}\nメールアドレス: ${email}\n電話番号: ${phone || 'なし'}\nご相談内容: ${categoryText}\nご紹介者: ${referrerText}\n\n${message}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px;">
           <h2>ウェブサイトからのお問い合わせ</h2>
-          <p><strong>名前:</strong> ${name}</p>
-          <p><strong>メールアドレス:</strong> ${email}</p>
-          <p><strong>電話番号:</strong> ${phone || 'なし'}</p>
-          <p><strong>件名:</strong> ${subject}</p>
+          <p><strong>名前:</strong> ${escapeHtml(String(name))}</p>
+          <p><strong>メールアドレス:</strong> ${escapeHtml(String(email))}</p>
+          <p><strong>電話番号:</strong> ${escapeHtml(String(phone || 'なし'))}</p>
+          <p><strong>ご相談内容:</strong> ${escapeHtml(String(categoryText))}</p>
+          <p><strong>ご紹介者:</strong> ${escapeHtml(String(referrerText))}</p>
+          <p><strong>件名:</strong> ${escapeHtml(String(subject))}</p>
           <hr style="border: 1px solid #eee; margin: 20px 0;" />
           <p><strong>メッセージ:</strong></p>
-          <p>${message.replace(/\n/g, '<br>')}</p>
+          <p>${escapeHtml(String(message)).replace(/\n/g, '<br>')}</p>
         </div>
       `,
       replyTo: email, // 返信先を問い合わせ者のメールアドレスに設定
@@ -49,4 +64,4 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   }
-} 
+}

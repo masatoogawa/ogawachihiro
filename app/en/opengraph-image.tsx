@@ -29,7 +29,7 @@ export default async function Image() {
         }}
       >
         <div style={{ fontSize: 64, marginBottom: 24 }}>Chihiro Ogawa Administrative Scrivener Office</div>
-        <div style={{ fontSize: 32 }}>Copyright, Contracts & Business Licensing Support</div>
+        <div style={{ fontSize: 32 }}>Subsidy & Grant Application Support</div>
       </div>
     ),
     // ImageResponse options

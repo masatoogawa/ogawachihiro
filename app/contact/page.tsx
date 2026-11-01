@@ -5,23 +5,35 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { useLanguage } from "@/contexts/language-context"
-import { MapPin, Mail, Loader2, CheckCircle, AlertCircle } from "lucide-react"
+import { MapPin, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import Image from "next/image"
 import { useState, FormEvent } from "react"
 
+// ご相談内容の選択肢（value はメール本文にそのまま載る日本語表記）
+const CATEGORY_OPTIONS = [
+  { value: "補助金・助成金", en: "Subsidies and grants" },
+  { value: "著作権・契約書", en: "Copyright and contracts" },
+  { value: "許認可・会社設立", en: "Licenses/permits and company incorporation" },
+  { value: "その他", en: "Other" },
+]
+
+const INITIAL_FORM_STATE = {
+  name: "",
+  email: "",
+  phone: "",
+  category: "",
+  subject: "",
+  referrer: "",
+  message: "",
+}
+
 export default function Contact() {
   const { t } = useLanguage()
-  const [formState, setFormState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: ""
-  })
+  const [formState, setFormState] = useState(INITIAL_FORM_STATE)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target
     setFormState(prev => ({ ...prev, [id]: value }))
   }
@@ -43,13 +55,7 @@ export default function Contact() {
       if (response.ok) {
         setSubmitStatus("success")
         // フォームをリセット
-        setFormState({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: ""
-        })
+        setFormState(INITIAL_FORM_STATE)
       } else {
         setSubmitStatus("error")
       }
@@ -96,7 +102,7 @@ export default function Contact() {
               <h2 className="font-semibold mb-3 text-sky-700">
                 {t("連絡先情報", "Contact Information")}
               </h2>
-              <div className="space-y-3">
+              <div>
                 <p className="flex items-start gap-2">
                   <MapPin className="text-sky-600 shrink-0 mt-1" />
                   <span>
@@ -105,12 +111,6 @@ export default function Contact() {
                       "4-15, Keio Hatagaya Building 4F, 1-2-2 Hatagaya, Shibuya-ku, Tokyo 151-0072, Japan",
                     )}
                   </span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="text-sky-600" />
-                  <a href="mailto:info@ogawachihiro-office.com" className="text-sky-600 hover:underline">
-                    info@ogawachihiro-office.com
-                  </a>
                 </p>
               </div>
             </div>
@@ -154,8 +154,8 @@ export default function Contact() {
                 </div>
                 <p className="mt-2 text-sm text-red-700">
                   {t(
-                    "送信中にエラーが発生しました。もう一度お試しいただくか、メールまたは公式LINEよりお問い合わせください。",
-                    "An error occurred while sending your message. Please try again, or contact us by email or via our official LINE.",
+                    "送信中にエラーが発生しました。もう一度お試しいただくか、公式LINEよりお問い合わせください。",
+                    "An error occurred while sending your message. Please try again, or contact us via our official LINE.",
                   )}
                 </p>
               </div>
@@ -199,6 +199,28 @@ export default function Contact() {
             </div>
 
             <div className="space-y-2">
+              <Label htmlFor="category">
+                {t("ご相談内容", "Type of Inquiry")} <span className="text-red-500">*</span>
+              </Label>
+              <select
+                id="category"
+                required
+                value={formState.category}
+                onChange={handleChange}
+                className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring md:text-sm"
+              >
+                <option value="" disabled>
+                  {t("選択してください", "Please select")}
+                </option>
+                {CATEGORY_OPTIONS.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {t(option.value, option.en)}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="space-y-2">
               <Label htmlFor="subject">
                 {t("件名", "Subject")} <span className="text-red-500">*</span>
               </Label>
@@ -206,6 +228,17 @@ export default function Contact() {
                 id="subject"
                 required
                 value={formState.subject}
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="referrer">
+                {t("ご紹介者（いらっしゃる場合）", "Referred by (if applicable)")}
+              </Label>
+              <Input
+                id="referrer"
+                value={formState.referrer}
                 onChange={handleChange}
               />
             </div>
