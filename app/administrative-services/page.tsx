@@ -143,8 +143,8 @@ export default function AdministrativeServices() {
                 <li>{t("上記の金額は税抜記載です。", "The amounts above are exclusive of tax.")}</li>
                 <li>
                   {t(
-                    "初回のご相談（サービス内容や手続きの流れについて）は、1時間まで無料です。次のような場合は、費用をいただいております。",
-                    "The first consultation (about our services and the flow of procedures) is free for up to one hour. Fees apply in the following cases:",
+                    "初回のご相談（サービス内容や手続きの流れについて）は、30分まで無料です。次のような場合は、費用をいただいております。",
+                    "The first consultation (about our services and the flow of procedures) is free for up to 30 minutes. Fees apply in the following cases:",
                   )}
                   <ul className="list-none mt-1 space-y-1">
                     <li>{t("・2回目以降のご相談：1時間5,000円〜（税抜）", "・Second and subsequent consultations: from ¥5,000 per hour (excluding tax)")}</li>
