@@ -78,8 +78,8 @@ export default function Contact() {
           <div>
             <p className="mb-3">
               {t(
-                "無料相談（初回１時間）のご予約やお問い合わせは、こちらで受け付けております。",
-                "We accept reservations for free consultations (first hour) and inquiries here.",
+                "無料相談（初回30分）のご予約やお問い合わせは、こちらで受け付けております。",
+                "We accept reservations for free consultations (first 30 minutes) and inquiries here.",
               )}
             </p>
             <p className="mb-6 text-sm text-gray-600">

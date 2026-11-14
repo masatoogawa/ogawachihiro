@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button"
 
 const STEPS = [
   {
-    titleJa: "ご相談（初回無料）",
-    titleEn: "Consultation (first session free)",
+    titleJa: "ご相談（初回30分無料）",
+    titleEn: "Consultation (first 30 minutes free)",
     bodyJa:
       "使いたい補助金や、導入したいもの、時期を伺います。「この補助金を使いたい」「こういう設備を入れたい」など、やりたいことが決まった段階でご相談ください。",
     bodyEn:
